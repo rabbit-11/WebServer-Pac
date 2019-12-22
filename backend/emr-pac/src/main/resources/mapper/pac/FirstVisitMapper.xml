@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hele.emr.pac.dao.FirstVisitMapper">
+    <select id="queryFirstVisit" parameterType="String" resultType="cn.hele.emr.pac.model.FirstVisit">
+        SELECT * FROM pac_first_visit
+        WHERE idcard = #{idcard} and status = '0'
+    </select>
+
+    <insert id="insertFirstVisit" parameterType="cn.hele.emr.pac.model.FirstVisit">
+        insert into pac_first_visit
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="createtime != null">
+                createtime,
+            </if>
+            <if test="updatetime != null">
+                updatetime,
+            </if>
+            <if test="jiuzhenid != null">
+                jiuzhenid,
+            </if>
+            <if test="departmentcode != null">
+                departmentcode,
+            </if>
+            <if test="departmentname != null">
+                departmentname,
+            </if>
+            <if test="createusercode != null">
+                createusercode,
+            </if>
+            <if test="createusername != null">
+                createusername,
+            </if>
+            <if test="lastmofidyusercode != null">
+                lastmofidyusercode,
+            </if>
+            <if test="idcard != null">
+                idcard,
+            </if>
+            <if test="personname != null">
+                personname,
+            </if>
+            <if test="birthday != null">
+                birthday,
+            </if>
+            <if test="height != null">
+                height,
+            </if>
+            <if test="weight != null">
+                weight,
+            </if>
+            <if test="bmi != null">
+                bmi,
+            </if>
+            <if test="lastmenstrualperiod != null">
+                lastmenstrualperiod,
+            </if>
+            <if test="labor != null">
+                labor,
+            </if>
+            <if test="pacEducationcode != null">
+                pac_educationcode,
+            </if>
+            <if test="annualincome != null">
+                annualincome,
+            </if>
+            <if test="pacMaritalstatuscode != null">
+                pac_maritalstatuscode,
+            </if>
+            <if test="gravidity != null">
+                gravidity,
+            </if>
+            <if test="parity != null">
+                parity,
+            </if>
+            <if test="inducedabortion != null">
+                inducedabortion,
+            </if>
+            <if test="preabortiontime != null">
+                preabortiontime,
+            </if>
+            <if test="preabortionplace != null">
+                preabortionplace,
+            </if>
+            <if test="cesareansection != null">
+                cesareansection,
+            </if>
+            <if test="menstrualcondition != null">
+                menstrualcondition,
+            </if>
+            <if test="highriskreason != null">
+                highriskreason,
+            </if>
+            <if test="gestationreason != null">
+                gestationreason,
+            </if>
+            <if test="contraceptivemethod != null">
+                contraceptivemethod,
+            </if>
+            <if test="abortionmethod != null">
+                abortionmethod,
+            </if>
+            <if test="plannextpreg != null">
+                plannextpreg,
+            </if>
+            <if test="sexcode != null">
+                sexcode,
+            </if>
+            <if test="patientaccount != null">
+                patientaccount,
+            </if>
+            <if test="mobilenumber != null">
+                mobilenumber,
+            </if>
+            <if test="pacRegisteredpermanent != null">
+                pac_registeredpermanent,
+            </if>
+            <if test="status != null">
+                "status",
+            </if>
+            <if test="isconfirm != null">
+                isconfirm,
+            </if>
+            <if test="guide != null">
+                guide,
+            </if>
+            <if test="qwetimes != null">
+                qwetimes,
+            </if>
+            <if test="predeliverytime != null">
+                predeliverytime,
+            </if>
+            <if test="pacPredeliverymode != null">
+                pac_predeliverymode,
+            </if>
+            <if test="predeliveryplace != null">
+                predeliveryplace,
+            </if>
+            <if test="pacMenstrualvolume != null">
+                pac_menstrualvolume,
+            </if>
+            <if test="pacDysmenorrhea != null">
+                pac_dysmenorrhea,
+            </if>
+            <if test="menstruationrestored != null">
+                menstruationrestored,
+            </if>
+            <if test="lactation != null">
+                lactation,
+            </if>
+            <if test="preabortionreason != null">
+                preabortionreason,
+            </if>
+            <if test="repeatHighriskreason != null">
+                repeat_highriskreason,
+            </if>
+            <if test="lastmofidyusername != null">
+                lastmofidyusername,
+            </if>
+            <if test="patientid != null">
+                patientid,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="createtime != null">
+                #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updatetime != null">
+                #{updatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="jiuzhenid != null">
+                #{jiuzhenid,jdbcType=VARCHAR},
+            </if>
+            <if test="departmentcode != null">
+                #{departmentcode,jdbcType=VARCHAR},
+            </if>
+            <if test="departmentname != null">
+                #{departmentname,jdbcType=VARCHAR},
+            </if>
+            <if test="createusercode != null">
+                #{createusercode,jdbcType=VARCHAR},
+            </if>
+            <if test="createusername != null">
+                #{createusername,jdbcType=VARCHAR},
+            </if>
+            <if test="lastmofidyusercode != null">
+                #{lastmofidyusercode,jdbcType=VARCHAR},
+            </if>
+            <if test="idcard != null">
+                #{idcard,jdbcType=VARCHAR},
+            </if>
+            <if test="personname != null">
+                #{personname,jdbcType=VARCHAR},
+            </if>
+            <if test="birthday != null">
+                #{birthday,jdbcType=TIMESTAMP},
+            </if>
+            <if test="height != null">
+                #{height,jdbcType=DECIMAL},
+            </if>
+            <if test="weight != null">
+                #{weight,jdbcType=DECIMAL},
+            </if>
+            <if test="bmi != null">
+                #{bmi,jdbcType=DECIMAL},
+            </if>
+            <if test="lastmenstrualperiod != null">
+                #{lastmenstrualperiod,jdbcType=DATE},
+            </if>
+            <if test="labor != null">
+                #{labor,jdbcType=CHAR},
+            </if>
+            <if test="pacEducationcode != null">
+                #{pacEducationcode,jdbcType=VARCHAR},
+            </if>
+            <if test="annualincome != null">
+                #{annualincome,jdbcType=CHAR},
+            </if>
+            <if test="pacMaritalstatuscode != null">
+                #{pacMaritalstatuscode,jdbcType=CHAR},
+            </if>
+            <if test="gravidity != null">
+                #{gravidity,jdbcType=VARCHAR},
+            </if>
+            <if test="parity != null">
+                #{parity,jdbcType=VARCHAR},
+            </if>
+            <if test="inducedabortion != null">
+                #{inducedabortion,jdbcType=INTEGER},
+            </if>
+            <if test="preabortiontime != null">
+                #{preabortiontime,jdbcType=DATE},
+            </if>
+            <if test="preabortionplace != null">
+                #{preabortionplace,jdbcType=VARCHAR},
+            </if>
+            <if test="cesareansection != null">
+                #{cesareansection,jdbcType=INTEGER},
+            </if>
+            <if test="menstrualcondition != null">
+                #{menstrualcondition,jdbcType=CHAR},
+            </if>
+            <if test="highriskreason != null">
+                #{highriskreason,jdbcType=VARCHAR},
+            </if>
+            <if test="gestationreason != null">
+                #{gestationreason,jdbcType=CHAR},
+            </if>
+            <if test="contraceptivemethod != null">
+                #{contraceptivemethod,jdbcType=VARCHAR},
+            </if>
+            <if test="abortionmethod != null">
+                #{abortionmethod,jdbcType=CHAR},
+            </if>
+            <if test="plannextpreg != null">
+                #{plannextpreg,jdbcType=CHAR},
+            </if>
+            <if test="sexcode != null">
+                #{sexcode,jdbcType=CHAR},
+            </if>
+            <if test="patientaccount != null">
+                #{patientaccount,jdbcType=VARCHAR},
+            </if>
+            <if test="mobilenumber != null">
+                #{mobilenumber,jdbcType=VARCHAR},
+            </if>
+            <if test="pacRegisteredpermanent != null">
+                #{pacRegisteredpermanent,jdbcType=CHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=CHAR},
+            </if>
+            <if test="isconfirm != null">
+                #{isconfirm,jdbcType=CHAR},
+            </if>
+            <if test="guide != null">
+                #{guide,jdbcType=VARCHAR},
+            </if>
+            <if test="qwetimes != null">
+                #{qwetimes,jdbcType=INTEGER},
+            </if>
+            <if test="predeliverytime != null">
+                #{predeliverytime,jdbcType=DATE},
+            </if>
+            <if test="pacPredeliverymode != null">
+                #{pacPredeliverymode,jdbcType=VARCHAR},
+            </if>
+            <if test="predeliveryplace != null">
+                #{predeliveryplace,jdbcType=VARCHAR},
+            </if>
+            <if test="pacMenstrualvolume != null">
+                #{pacMenstrualvolume,jdbcType=CHAR},
+            </if>
+            <if test="pacDysmenorrhea != null">
+                #{pacDysmenorrhea,jdbcType=CHAR},
+            </if>
+            <if test="menstruationrestored != null">
+                #{menstruationrestored,jdbcType=CHAR},
+            </if>
+            <if test="lactation != null">
+                #{lactation,jdbcType=CHAR},
+            </if>
+            <if test="preabortionreason != null">
+                #{preabortionreason,jdbcType=VARCHAR},
+            </if>
+            <if test="repeatHighriskreason != null">
+                #{repeatHighriskreason,jdbcType=VARCHAR},
+            </if>
+            <if test="lastmofidyusername != null">
+                #{lastmofidyusername,jdbcType=VARCHAR},
+            </if>
+            <if test="patientid != null">
+                #{patientid,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateFirstVisit" parameterType="cn.hele.emr.pac.model.FirstVisit">
+        update pac_first_visit
+        <set>
+            <if test="createtime != null">
+                createtime = #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updatetime != null">
+                updatetime = #{updatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="jiuzhenid != null">
+                jiuzhenid = #{jiuzhenid,jdbcType=VARCHAR},
+            </if>
+            <if test="departmentcode != null">
+                departmentcode = #{departmentcode,jdbcType=VARCHAR},
+            </if>
+            <if test="departmentname != null">
+                departmentname = #{departmentname,jdbcType=VARCHAR},
+            </if>
+            <if test="createusercode != null">
+                createusercode = #{createusercode,jdbcType=VARCHAR},
+            </if>
+            <if test="createusername != null">
+                createusername = #{createusername,jdbcType=VARCHAR},
+            </if>
+            <if test="lastmofidyusercode != null">
+                lastmofidyusercode = #{lastmofidyusercode,jdbcType=VARCHAR},
+            </if>
+            <if test="lastmofidyusername != null">
+                lastmofidyusername = #{lastmofidyusername,jdbcType=VARCHAR},
+            </if>
+            <if test="idcard != null">
+                idcard = #{idcard,jdbcType=VARCHAR},
+            </if>
+            <if test="patientid != null">
+                patientid = #{patientid,jdbcType=VARCHAR},
+            </if>
+            <if test="personname != null">
+                personname = #{personname,jdbcType=VARCHAR},
+            </if>
+            <if test="birthday != null">
+                birthday = #{birthday,jdbcType=TIMESTAMP},
+            </if>
+            <if test="height != null">
+                height = #{height,jdbcType=DECIMAL},
+            </if>
+            <if test="weight != null">
+                weight = #{weight,jdbcType=DECIMAL},
+            </if>
+            <if test="bmi != null">
+                bmi = #{bmi,jdbcType=DECIMAL},
+            </if>
+            <if test="lastmenstrualperiod != null">
+                lastmenstrualperiod = #{lastmenstrualperiod,jdbcType=DATE},
+            </if>
+            <if test="labor != null">
+                labor = #{labor,jdbcType=CHAR},
+            </if>
+            <if test="pacEducationcode != null">
+                pac_educationcode = #{pacEducationcode,jdbcType=VARCHAR},
+            </if>
+            <if test="annualincome != null">
+                annualincome = #{annualincome,jdbcType=CHAR},
+            </if>
+            <if test="pacMaritalstatuscode != null">
+                pac_maritalstatuscode = #{pacMaritalstatuscode,jdbcType=CHAR},
+            </if>
+            <if test="gravidity != null">
+                gravidity = #{gravidity,jdbcType=VARCHAR},
+            </if>
+            <if test="parity != null">
+                parity = #{parity,jdbcType=VARCHAR},
+            </if>
+            <if test="inducedabortion != null">
+                inducedabortion = #{inducedabortion,jdbcType=INTEGER},
+            </if>
+            <if test="preabortiontime != null">
+                preabortiontime = #{preabortiontime,jdbcType=DATE},
+            </if>
+            <if test="preabortionplace != null">
+                preabortionplace = #{preabortionplace,jdbcType=VARCHAR},
+            </if>
+            <if test="cesareansection != null">
+                cesareansection = #{cesareansection,jdbcType=INTEGER},
+            </if>
+            <if test="menstrualcondition != null">
+                menstrualcondition = #{menstrualcondition,jdbcType=CHAR},
+            </if>
+            <if test="highriskreason != null">
+                highriskreason = #{highriskreason,jdbcType=VARCHAR},
+            </if>
+            <if test="gestationreason != null">
+                gestationreason = #{gestationreason,jdbcType=CHAR},
+            </if>
+            <if test="contraceptivemethod != null">
+                contraceptivemethod = #{contraceptivemethod,jdbcType=VARCHAR},
+            </if>
+            <if test="abortionmethod != null">
+                abortionmethod = #{abortionmethod,jdbcType=CHAR},
+            </if>
+            <if test="plannextpreg != null">
+                plannextpreg = #{plannextpreg,jdbcType=CHAR},
+            </if>
+            <if test="sexcode != null">
+                sexcode = #{sexcode,jdbcType=CHAR},
+            </if>
+            <if test="patientaccount != null">
+                patientaccount = #{patientaccount,jdbcType=VARCHAR},
+            </if>
+            <if test="mobilenumber != null">
+                mobilenumber = #{mobilenumber,jdbcType=VARCHAR},
+            </if>
+            <if test="pacRegisteredpermanent != null">
+                pac_registeredpermanent = #{pacRegisteredpermanent,jdbcType=CHAR},
+            </if>
+            <if test="status != null">
+                "status" = #{status,jdbcType=CHAR},
+            </if>
+            <if test="isconfirm != null">
+                isconfirm = #{isconfirm,jdbcType=CHAR},
+            </if>
+            <if test="guide != null">
+                guide = #{guide,jdbcType=VARCHAR},
+            </if>
+            <if test="qwetimes != null">
+                qwetimes = #{qwetimes,jdbcType=INTEGER},
+            </if>
+            <if test="predeliverytime != null">
+                predeliverytime = #{predeliverytime,jdbcType=DATE},
+            </if>
+            <if test="pacPredeliverymode != null">
+                pac_predeliverymode = #{pacPredeliverymode,jdbcType=VARCHAR},
+            </if>
+            <if test="predeliveryplace != null">
+                predeliveryplace = #{predeliveryplace,jdbcType=VARCHAR},
+            </if>
+            <if test="pacMenstrualvolume != null">
+                pac_menstrualvolume = #{pacMenstrualvolume,jdbcType=CHAR},
+            </if>
+            <if test="pacDysmenorrhea != null">
+                pac_dysmenorrhea = #{pacDysmenorrhea,jdbcType=CHAR},
+            </if>
+            <if test="menstruationrestored != null">
+                menstruationrestored = #{menstruationrestored,jdbcType=CHAR},
+            </if>
+            <if test="lactation != null">
+                lactation = #{lactation,jdbcType=CHAR},
+            </if>
+            <if test="preabortionreason != null">
+                preabortionreason = #{preabortionreason,jdbcType=VARCHAR},
+            </if>
+            <if test="repeatHighriskreason != null">
+                repeat_highriskreason = #{repeatHighriskreason,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+</mapper>

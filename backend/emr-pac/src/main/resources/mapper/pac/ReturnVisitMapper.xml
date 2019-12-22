@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.hele.emr.pac.dao.ReturnVisitMapper">
+    <select id="selectReturnVisit" parameterType="Integer" resultType="cn.hele.emr.pac.model.ReturnVisit">
+        SELECT *
+        FROM pac_return_visit
+        WHERE id = #{id}
+    </select>
+
+    <insert id="insertReturnVisit" parameterType="cn.hele.emr.pac.model.ReturnVisit">
+        insert into pac_return_visit
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="createtime != null">
+                createtime,
+            </if>
+            <if test="updatetime != null">
+                updatetime,
+            </if>
+            <if test="jiuzhenid != null">
+                jiuzhenid,
+            </if>
+            <if test="departmentcode != null">
+                departmentcode,
+            </if>
+            <if test="departmentname != null">
+                departmentname,
+            </if>
+            <if test="createusercode != null">
+                createusercode,
+            </if>
+            <if test="createusername != null">
+                createusername,
+            </if>
+            <if test="lastmofidyusercode != null">
+                lastmofidyusercode,
+            </if>
+            <if test="lastmofidyusername != null">
+                lastmofidyusername,
+            </if>
+            <if test="visitContraceptivemethod != null">
+                visit_contraceptivemethod,
+            </if>
+            <if test="leakagemedicine != null">
+                leakagemedicine,
+            </if>
+            <if test="complication != null">
+                complication,
+            </if>
+            <if test="leucorrhea != null">
+                leucorrhea,
+            </if>
+            <if test="ispreged != null">
+                ispreged,
+            </if>
+            <if test="smoking != null">
+                smoking,
+            </if>
+            <if test="sport != null">
+                sport,
+            </if>
+            <if test="sexlifefreq != null">
+                sexlifefreq,
+            </if>
+            <if test="bioindex != null">
+                bioindex,
+            </if>
+            <if test="generalinfoid != null">
+                generalinfoid,
+            </if>
+            <if test="visitdate != null">
+                visitdate,
+            </if>
+            <if test="pressure != null">
+                pressure,
+            </if>
+            <if test="anxious != null">
+                anxious,
+            </if>
+            <if test="depressed != null">
+                depressed,
+            </if>
+            <if test="overfatigue != null">
+                overfatigue,
+            </if>
+            <if test="angry != null">
+                angry,
+            </if>
+            <if test="tension != null">
+                tension,
+            </if>
+            <if test="acyeterionname != null">
+                acyeterionname,
+            </if>
+            <if test="emotionalchange != null">
+                emotionalchange,
+            </if>
+            <if test="weightchange != null">
+                weightchange,
+            </if>
+            <if test="weightchangeamount != null">
+                weightchangeamount,
+            </if>
+            <if test="medicineComplication != null">
+                medicine_complication,
+            </if>
+            <if test="smokingamount != null">
+                smokingamount,
+            </if>
+            <if test="sportlength != null">
+                sportlength,
+            </if>
+            <if test="sportmethod != null">
+                sportmethod,
+            </if>
+            <if test="afteroper != null">
+                afteroper,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="menstrualvolume != null">
+                menstrualvolume,
+            </if>
+            <if test="visitDysmenorrhea != null">
+                visit_dysmenorrhea,
+            </if>
+            <if test="guide != null">
+                guide,
+            </if>
+            <if test="physicalcondition != null">
+                physicalcondition,
+            </if>
+            <if test="vaginalbleeding != null">
+                vaginalbleeding,
+            </if>
+            <if test="recordtime != null">
+                recordtime,
+            </if>
+            <if test="acyeterioncount != null">
+                acyeterioncount,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="createtime != null">
+                #{createtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updatetime != null">
+                #{updatetime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="jiuzhenid != null">
+                #{jiuzhenid,jdbcType=VARCHAR},
+            </if>
+            <if test="departmentcode != null">
+                #{departmentcode,jdbcType=VARCHAR},
+            </if>
+            <if test="departmentname != null">
+                #{departmentname,jdbcType=VARCHAR},
+            </if>
+            <if test="createusercode != null">
+                #{createusercode,jdbcType=VARCHAR},
+            </if>
+            <if test="createusername != null">
+                #{createusername,jdbcType=VARCHAR},
+            </if>
+            <if test="lastmofidyusercode != null">
+                #{lastmofidyusercode,jdbcType=VARCHAR},
+            </if>
+            <if test="lastmofidyusername != null">
+                #{lastmofidyusername,jdbcType=VARCHAR},
+            </if>
+            <if test="visitContraceptivemethod != null">
+                #{visitContraceptivemethod,jdbcType=VARCHAR},
+            </if>
+            <if test="leakagemedicine != null">
+                #{leakagemedicine,jdbcType=CHAR},
+            </if>
+            <if test="complication != null">
+                #{complication,jdbcType=VARCHAR},
+            </if>
+            <if test="leucorrhea != null">
+                #{leucorrhea,jdbcType=CHAR},
+            </if>
+            <if test="ispreged != null">
+                #{ispreged,jdbcType=CHAR},
+            </if>
+            <if test="smoking != null">
+                #{smoking,jdbcType=CHAR},
+            </if>
+            <if test="sport != null">
+                #{sport,jdbcType=CHAR},
+            </if>
+            <if test="sexlifefreq != null">
+                #{sexlifefreq,jdbcType=CHAR},
+            </if>
+            <if test="bioindex != null">
+                #{bioindex,jdbcType=VARCHAR},
+            </if>
+            <if test="generalinfoid != null">
+                #{generalinfoid,jdbcType=INTEGER},
+            </if>
+            <if test="visitdate != null">
+                #{visitdate,jdbcType=DATE},
+            </if>
+            <if test="pressure != null">
+                #{pressure,jdbcType=CHAR},
+            </if>
+            <if test="anxious != null">
+                #{anxious,jdbcType=CHAR},
+            </if>
+            <if test="depressed != null">
+                #{depressed,jdbcType=CHAR},
+            </if>
+            <if test="overfatigue != null">
+                #{overfatigue,jdbcType=CHAR},
+            </if>
+            <if test="angry != null">
+                #{angry,jdbcType=CHAR},
+            </if>
+            <if test="tension != null">
+                #{tension,jdbcType=CHAR},
+            </if>
+            <if test="acyeterionname != null">
+                #{acyeterionname,jdbcType=VARCHAR},
+            </if>
+            <if test="emotionalchange != null">
+                #{emotionalchange,jdbcType=CHAR},
+            </if>
+            <if test="weightchange != null">
+                #{weightchange,jdbcType=CHAR},
+            </if>
+            <if test="weightchangeamount != null">
+                #{weightchangeamount,jdbcType=DECIMAL},
+            </if>
+            <if test="medicineComplication != null">
+                #{medicineComplication,jdbcType=VARCHAR},
+            </if>
+            <if test="smokingamount != null">
+                #{smokingamount,jdbcType=INTEGER},
+            </if>
+            <if test="sportlength != null">
+                #{sportlength,jdbcType=INTEGER},
+            </if>
+            <if test="sportmethod != null">
+                #{sportmethod,jdbcType=VARCHAR},
+            </if>
+            <if test="afteroper != null">
+                #{afteroper,jdbcType=INTEGER},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="menstrualvolume != null">
+                #{menstrualvolume,jdbcType=CHAR},
+            </if>
+            <if test="visitDysmenorrhea != null">
+                #{visitDysmenorrhea,jdbcType=CHAR},
+            </if>
+            <if test="guide != null">
+                #{guide,jdbcType=VARCHAR},
+            </if>
+            <if test="physicalcondition != null">
+                #{physicalcondition,jdbcType=CHAR},
+            </if>
+            <if test="vaginalbleeding != null">
+                #{vaginalbleeding,jdbcType=CHAR},
+            </if>
+            <if test="recordtime != null">
+                #{recordtime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="acyeterioncount != null">
+                #{acyeterioncount,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateReturnVisit" parameterType="cn.hele.emr.pac.model.ReturnVisit">
+
+    </update>
+    <select id="selectReturnVisitList" parameterType="Integer" resultType="cn.hele.emr.pac.model.ReturnVisit">
+        SELECT *
+        FROM pac_return_visit
+        WHERE generalinfoid = #{generalinfoid}
+        ORDER BY id DESC
+    </select>
+</mapper>
