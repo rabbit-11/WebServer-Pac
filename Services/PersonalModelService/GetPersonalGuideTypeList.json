@@ -1,0 +1,22 @@
+{
+    "result": 1,
+    "info": [
+        {
+            "id": 1,
+            "name": "首诊",
+            "platformid": 1
+        },
+        {
+            "id": 2,
+            "name": "手术记录",
+            "platformid": 1
+        },
+        {
+            "id": 3,
+            "name": "复诊",
+            "platformid": 1
+        }
+    ],
+    "msg": null,
+    "attr": null
+}

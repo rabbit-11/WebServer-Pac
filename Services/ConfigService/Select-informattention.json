@@ -1,0 +1,20 @@
+[
+    {
+        "value": 0,
+        "text": "请选择",
+        "index": 1,
+        "defaultselect": "1"
+    },
+    {
+        "value": 1,
+        "text": "否",
+        "index": 2,
+        "defaultselect": "0"
+    },
+    {
+        "value": 2,
+        "text": "是",
+        "index": 3,
+        "defaultselect": "0"
+    }
+]

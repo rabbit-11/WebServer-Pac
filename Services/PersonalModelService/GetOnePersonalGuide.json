@@ -1,0 +1,16 @@
+{
+    "result": 1,
+    "info": {
+        "id": 0,
+        "doctorid": "9999",
+        "doctorname": "",
+        "platformid": 1,
+        "jigoudm": "330302014",
+        "modeltypeid": 1,
+        "ispregweek": true,
+        "canshare": false,
+        "guide": ""
+    },
+    "msg": null,
+    "attr": null
+}

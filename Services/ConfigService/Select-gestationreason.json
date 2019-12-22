@@ -1,0 +1,20 @@
+[
+    {
+        "value": 0,
+        "text": "请选择",
+        "index": 1,
+        "defaultselect": "1"
+    },
+    {
+        "value": 1,
+        "text": "未避孕",
+        "index": 2,
+        "defaultselect": null
+    },
+    {
+        "value": 2,
+        "text": "避孕失败",
+        "index": 3,
+        "defaultselect": null
+    }
+]

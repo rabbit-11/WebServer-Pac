@@ -1,0 +1,44 @@
+[
+    {
+        "value": 0,
+        "text": "请选择",
+        "index": 1,
+        "defaultselect": "1"
+    },
+    {
+        "value": 1,
+        "text": "半年内",
+        "index": 2,
+        "defaultselect": null
+    },
+    {
+        "value": 2,
+        "text": "约7-12个月以后",
+        "index": 3,
+        "defaultselect": null
+    },
+    {
+        "value": 3,
+        "text": "一年后",
+        "index": 4,
+        "defaultselect": null
+    },
+    {
+        "value": 4,
+        "text": "两年及以上",
+        "index": 5,
+        "defaultselect": null
+    },
+    {
+        "value": 5,
+        "text": "暂无打算",
+        "index": 6,
+        "defaultselect": null
+    },
+    {
+        "value": 6,
+        "text": "说不清",
+        "index": 7,
+        "defaultselect": null
+    }
+]

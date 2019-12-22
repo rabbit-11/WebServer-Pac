@@ -1,0 +1,26 @@
+[
+    {
+        "value": 0,
+        "text": "请选择",
+        "index": 1,
+        "defaultselect": "1"
+    },
+    {
+        "value": 1,
+        "text": "日用卫生巾每天五个以上",
+        "index": 2,
+        "defaultselect": null
+    },
+    {
+        "value": 2,
+        "text": "每天3-4个",
+        "index": 3,
+        "defaultselect": null
+    },
+    {
+        "value": 3,
+        "text": "每天2个以下",
+        "index": 4,
+        "defaultselect": null
+    }
+]

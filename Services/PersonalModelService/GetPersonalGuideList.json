@@ -1,0 +1,40 @@
+[
+    {
+        "id": 1,
+        "guide": "ssss",
+        "startweek": null,
+        "endweek": null,
+        "modeltypeid": 1,
+        "diseasename": "人工流产",
+        "doctorid": "9999",
+        "doctorname": null,
+        "publicstatus": 0,
+        "status": null,
+        "createtime": "2019-12-18T15:10:54.587",
+        "updatetime": null,
+        "platformid": 1,
+        "setid": 1,
+        "stage": "首诊",
+        "jigoudm": "330302014",
+        "canedit": true
+    },
+    {
+        "id": 2,
+        "guide": "ssss",
+        "startweek": null,
+        "endweek": null,
+        "modeltypeid": 1,
+        "diseasename": "药物流产",
+        "doctorid": "9999",
+        "doctorname": null,
+        "publicstatus": 0,
+        "status": null,
+        "createtime": "2019-12-18T15:10:54.587",
+        "updatetime": null,
+        "platformid": 1,
+        "setid": 2,
+        "stage": "首诊",
+        "jigoudm": "330302014",
+        "canedit": true
+    }
+]

@@ -1,0 +1,52 @@
+{
+    "result": 1,
+    "info": {
+        "hasfile": false,
+        "idcard": "330302198905225629",
+        "personname": "吴珍",
+        "birthday": "1989-05-22",
+        "patientid": "2800988",
+        "sexcode": "女",
+        "mobilenumber": "13430289588",
+        "patientaccount": "4401002400149210",
+        "maritalstatuscode": null,
+        "gravidity": "2",
+        "parity": "0",
+        "nationcode": "汉族",
+        "highriskreason_latest": "乙肝大三阳",
+        "highrisk_latest": [
+            {
+                "color": "black",
+                "color_text": "最近"
+            },
+            {
+                "color": "green",
+                "color_text": "绿"
+            }
+        ],
+        "highrisk_highest": [
+            {
+                "color": "black",
+                "color_text": "最高"
+            },
+            {
+                "color": "yellow",
+                "color_text": "黄"
+            }
+        ],
+        "age": "(30岁)",
+        "lastmenstrualperiod": "2019-04-03",
+        "dateofprenatal": "2020-01-08",
+        "deliveryhistory": "G1P0",
+        "pasthistory": "无",
+        "bloodtypecode": "",
+        "rhbloodcode": "",
+        "blood": "",
+        "currentweekday": "33+2",
+        "allergyhistory": "无",
+        "pid": 64105,
+        "pregnantinfo": "预产期：2020/01/08&nbsp;&nbsp;孕产史：G1P0&nbsp;&nbsp;孕周：33+2&nbsp;&nbsp;"
+    },
+    "msg": null,
+    "attr": null
+}

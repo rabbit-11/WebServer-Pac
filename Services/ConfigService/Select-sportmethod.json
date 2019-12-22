@@ -1,0 +1,44 @@
+[
+    {
+        "value": 0,
+        "text": "请选择",
+        "index": 1,
+        "defaultselect": "1"
+    },
+    {
+        "value": 1,
+        "text": "散步",
+        "index": 2,
+        "defaultselect": "0"
+    },
+    {
+        "value": 2,
+        "text": "快走",
+        "index": 3,
+        "defaultselect": "0"
+    },
+    {
+        "value": 3,
+        "text": "慢跑",
+        "index": 4,
+        "defaultselect": "0"
+    },
+    {
+        "value": 4,
+        "text": "自行车",
+        "index": 5,
+        "defaultselect": "0"
+    },
+    {
+        "value": 5,
+        "text": "健身房",
+        "index": 6,
+        "defaultselect": "0"
+    },
+    {
+        "value": 6,
+        "text": "瑜伽",
+        "index": 7,
+        "defaultselect": "0"
+    }
+]

@@ -1,0 +1,116 @@
+[
+    {
+        "value": 1,
+        "text": "年龄≤19岁或≥50岁",
+        "index": 1,
+        "defaultselect": "0"
+    },
+    {
+        "value": 2,
+        "text": "半年内曾做过人工流产",
+        "index": 2,
+        "defaultselect": "0"
+    },
+    {
+        "value": 3,
+        "text": "1年内有2次或以上人工流产史",
+        "index": 3,
+        "defaultselect": "0"
+    },
+    {
+        "value": 4,
+        "text": "人工流产总数超过3次",
+        "index": 4,
+        "defaultselect": "0"
+    },
+    {
+        "value": 5,
+        "text": "稽留流产",
+        "index": 5,
+        "defaultselect": "0"
+    },
+    {
+        "value": 6,
+        "text": "哺乳期 剖宫产术后半年内或足月分娩后3个月内",
+        "index": 6,
+        "defaultselect": "0"
+    },
+    {
+        "value": 7,
+        "text": "剖宫产后再孕史（包括剖宫取胎术后再孕）",
+        "index": 7,
+        "defaultselect": "0"
+    },
+    {
+        "value": 8,
+        "text": "妊娠合并内外科疾患 尤其合并功能异常",
+        "index": 8,
+        "defaultselect": "0"
+    },
+    {
+        "value": 9,
+        "text": "子宫手术史（如肌瘤剔除术 腺肌瘤剔除术） 生殖道手术史",
+        "index": 9,
+        "defaultselect": "0"
+    },
+    {
+        "value": 10,
+        "text": "生殖器畸形或盆腔肿瘤导致子宫腔变形",
+        "index": 10,
+        "defaultselect": "0"
+    },
+    {
+        "value": 11,
+        "text": "子宫位置高度倾屈",
+        "index": 11,
+        "defaultselect": "0"
+    },
+    {
+        "value": 12,
+        "text": "宫颈暴露困难",
+        "index": 12,
+        "defaultselect": "0"
+    },
+    {
+        "value": 13,
+        "text": "脊柱 下肢 骨盆病变致膀胱截石位困难",
+        "index": 13,
+        "defaultselect": "0"
+    },
+    {
+        "value": 14,
+        "text": "既往有不良孕产史（产科大出血 人流并发症等）",
+        "index": 14,
+        "defaultselect": "0"
+    },
+    {
+        "value": 15,
+        "text": "既往子宫穿孔 宫颈阴道段裂伤 伴阴道穹窿损伤",
+        "index": 15,
+        "defaultselect": "0"
+    },
+    {
+        "value": 16,
+        "text": "可疑或确诊的剖宫产后瘢痕 宫角妊娠 宫颈妊娠 子宫峡部妊娠",
+        "index": 16,
+        "defaultselect": "0"
+    },
+    {
+        "value": 17,
+        "text": "带器妊娠（包括宫内节育器变形 嵌顿等）",
+        "index": 17,
+        "defaultselect": "0"
+    },
+    {
+        "value": 18,
+        "text": "外院人工流产手术失败史",
+        "index": 18,
+        "defaultselect": "0"
+    },
+    {
+        "value": 19,
+        "text": "RH血型",
+        "index": 19,
+        "defaultselect": "0"
+    }
+]

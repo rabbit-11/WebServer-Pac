@@ -1,0 +1,50 @@
+[
+    {
+        "value": 0,
+        "text": "请选择",
+        "index": 1,
+        "defaultselect": "1"
+    },
+    {
+        "value": 1,
+        "text": "博士",
+        "index": 2,
+        "defaultselect": null
+    },
+    {
+        "value": 2,
+        "text": "研究生",
+        "index": 3,
+        "defaultselect": null
+    },
+    {
+        "value": 3,
+        "text": "大学本科",
+        "index": 4,
+        "defaultselect": null
+    },
+    {
+        "value": 4,
+        "text": "大学专科和专科学校",
+        "index": 5,
+        "defaultselect": null
+    },
+    {
+        "value": 5,
+        "text": "高中",
+        "index": 6,
+        "defaultselect": null
+    },
+    {
+        "value": 6,
+        "text": "初中",
+        "index": 7,
+        "defaultselect": null
+    },
+    {
+        "value": 7,
+        "text": "小学",
+        "index": 8,
+        "defaultselect": null
+    }
+]

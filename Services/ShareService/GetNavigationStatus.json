@@ -1,0 +1,13 @@
+{
+    "result": 1,
+    "info": {
+        "en_pregnantinfo": true,
+        "en_operativerecord": true,
+        "en_followupvisit": true,
+        "vs_pregnantinfo": true,
+        "vs_operativerecord": true,
+        "vs_followupvisit": true
+    },
+    "msg": null,
+    "attr": null
+}

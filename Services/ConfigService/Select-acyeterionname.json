@@ -1,0 +1,20 @@
+[
+    {
+        "value": 1,
+        "text": "全选",
+        "index": 1,
+        "defaultselect": "0"
+    },
+    {
+        "value": 2,
+        "text": "优思悦",
+        "index": 2,
+        "defaultselect": "0"
+    },
+    {
+        "value": 3,
+        "text": "妈富隆",
+        "index": 3,
+        "defaultselect": "0"
+    }
+]

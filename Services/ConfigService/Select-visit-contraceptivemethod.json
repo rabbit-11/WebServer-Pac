@@ -1,0 +1,68 @@
+[
+    {
+        "value": 0,
+        "text": "请选择",
+        "index": 1,
+        "defaultselect": "1"
+    },
+    {
+        "value": 1,
+        "text": "未避孕",
+        "index": 2,
+        "defaultselect": null
+    },
+    {
+        "value": 2,
+        "text": "避孕套",
+        "index": 3,
+        "defaultselect": null
+    },
+    {
+        "value": 3,
+        "text": "紧急避孕药",
+        "index": 4,
+        "defaultselect": null
+    },
+    {
+        "value": 4,
+        "text": "安全期",
+        "index": 5,
+        "defaultselect": null
+    },
+    {
+        "value": 5,
+        "text": "体外射精",
+        "index": 6,
+        "defaultselect": null
+    },
+    {
+        "value": 6,
+        "text": "口服避孕药（COC）",
+        "index": 7,
+        "defaultselect": null
+    },
+    {
+        "value": 7,
+        "text": "IUD",
+        "index": 8,
+        "defaultselect": null
+    },
+    {
+        "value": 8,
+        "text": "IUS",
+        "index": 9,
+        "defaultselect": null
+    },
+    {
+        "value": 9,
+        "text": "结扎",
+        "index": 10,
+        "defaultselect": null
+    },
+    {
+        "value": "a",
+        "text": "皮下埋植剂",
+        "index": 11,
+        "defaultselect": null
+    }
+]

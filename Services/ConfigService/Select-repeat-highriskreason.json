@@ -1,0 +1,56 @@
+[
+    {
+        "value": 1,
+        "text": "年龄≤19岁",
+        "index": 1,
+        "defaultselect": "0"
+    },
+    {
+        "value": 2,
+        "text": "半年内曾做过人工流产",
+        "index": 2,
+        "defaultselect": "0"
+    },
+    {
+        "value": 3,
+        "text": "1年内有2次或以上人工流产史",
+        "index": 3,
+        "defaultselect": "0"
+    },
+    {
+        "value": 4,
+        "text": "人工流产总数超过3次",
+        "index": 4,
+        "defaultselect": "0"
+    },
+    {
+        "value": 5,
+        "text": "近期或已多次使用过紧急避孕药",
+        "index": 5,
+        "defaultselect": "0"
+    },
+    {
+        "value": 6,
+        "text": "未婚或性关系不稳定",
+        "index": 6,
+        "defaultselect": "0"
+    },
+    {
+        "value": 7,
+        "text": "未与家人一起生活",
+        "index": 7,
+        "defaultselect": "0"
+    },
+    {
+        "value": 8,
+        "text": "文化程度初中以及以下",
+        "index": 8,
+        "defaultselect": "0"
+    },
+    {
+        "value": 9,
+        "text": "本次人工流产术后尚无计划使用长效可逆避孕方法",
+        "index": 9,
+        "defaultselect": "0"
+    }
+]

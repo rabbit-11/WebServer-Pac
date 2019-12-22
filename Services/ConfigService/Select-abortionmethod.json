@@ -1,0 +1,32 @@
+[
+    {
+        "value": 0,
+        "text": "请选择",
+        "index": 1,
+        "defaultselect": "1"
+    },
+    {
+        "value": 1,
+        "text": "人流",
+        "index": 2,
+        "defaultselect": null
+    },
+    {
+        "value": 2,
+        "text": "药流",
+        "index": 3,
+        "defaultselect": null
+    },
+    {
+        "value": 3,
+        "text": "稽留清宫流产",
+        "index": 4,
+        "defaultselect": null
+    },
+    {
+        "value": 4,
+        "text": "药流清宫",
+        "index": 5,
+        "defaultselect": null
+    }
+]

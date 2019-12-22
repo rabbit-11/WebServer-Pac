@@ -1,0 +1,30 @@
+{
+    "result": 1,
+    "info": {
+        "pregnanthistory": {
+            "jiuzhenid": "7413850",
+            "nianling": 30,
+            "xitongsj": "0001/1/1 0:00:00",
+            "jiezhensj": "2018-08-07T08:09:59",
+            "guahaoid": "7474202",
+            "keshidm": "3001",
+            "keshimc": "西妇科",
+            "guahaobc": "",
+            "guahaoxh": "7474202",
+            "yishengxm": "方xx",
+            "chushengrq": "1988-01-01",
+            "jiuzhenkh": "",
+            "xingming": "袁x",
+            "xingbie": "2",
+            "zhengjianhm": "420704xxxxxxxx5587",
+            "bingrenid": "5828641",
+            "jiatingzz": "温州xxxxxxxx小区A幢xxx室",
+            "lianxidh": "",
+            "age": "31岁",
+            "weight": "60",
+            "height": "170"
+        }
+    },
+    "msg": null,
+    "attr": null
+}

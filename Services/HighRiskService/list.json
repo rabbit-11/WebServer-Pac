@@ -1,0 +1,70 @@
+{
+    "result": 1,
+    "info": [
+        {
+            "visitdate": "2019-08-26",
+            "highrisklevel": null,
+            "highriskreason": null,
+            "highriskdic": null,
+            "highriskcolor": "绿",
+            "index": 1,
+            "empty": false
+        },
+        {
+            "visitdate": "2019-08-26",
+            "highrisklevel": null,
+            "highriskreason": null,
+            "highriskdic": "[]",
+            "highriskcolor": "绿",
+            "index": 2,
+            "empty": false
+        },
+        {
+            "visitdate": "2019-08-27",
+            "highrisklevel": null,
+            "highriskreason": null,
+            "highriskdic": null,
+            "highriskcolor": "绿",
+            "index": 3,
+            "empty": false
+        },
+        {
+            "visitdate": "2019-09-19",
+            "highrisklevel": null,
+            "highriskreason": null,
+            "highriskdic": "[]",
+            "highriskcolor": "绿",
+            "index": 4,
+            "empty": false
+        },
+        {
+            "visitdate": "2019-10-23",
+            "highrisklevel": null,
+            "highriskreason": null,
+            "highriskdic": null,
+            "highriskcolor": "绿",
+            "index": 5,
+            "empty": false
+        },
+        {
+            "visitdate": "2019-10-24",
+            "highrisklevel": "A",
+            "highriskreason": "正常＜ALT＜100单位",
+            "highriskdic": "[{\"t\":\"正常＜ALT＜100单位\",\"l\":\"A\",\"r\":\"a70201\"}]",
+            "highriskcolor": "黄",
+            "index": 6,
+            "empty": false
+        },
+        {
+            "visitdate": "2019-10-25",
+            "highrisklevel": null,
+            "highriskreason": "乙肝大三阳",
+            "highriskdic": "[{\"t\":\"乙肝大三阳\",\"l\":\"Z\",\"r\":\"b901\"}]",
+            "highriskcolor": "绿",
+            "index": 7,
+            "empty": false
+        }
+    ],
+    "msg": null,
+    "attr": null
+}
