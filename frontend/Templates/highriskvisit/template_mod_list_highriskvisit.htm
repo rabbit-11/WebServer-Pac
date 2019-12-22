@@ -1,0 +1,104 @@
+﻿<style type="text/css">
+.td_title{padding:4px;}
+</style>
+<div  class="querywrapper">
+    <div style="background-color:#f2f2f2;border:1px solid #ddd;padding:10px 50px 10px 50px ; position:relative;">
+         <div style="position:absolute;right:3px;top:3px;">
+        <a class="easyui-linkbutton" id="btn_logout" >注销</a>
+        </div>
+        <table width="100%">
+        <tr>
+            <td style="width:10%;" class="td_title">预产期：</td>
+            <td style="width:20%"><input class="easyui-datebox" id="s_dateofprenatal" style="width:45%;" />-<input class="easyui-datebox" id="e_dateofprenatal" style="width:45%;" /></td>            
+            <td style="width:10%" class="td_title">姓名：</td>
+            <td style="width:10%"><input class="easyui-textbox" id="personname" style="width:100%;"/></td>
+            <td style="width:10%" class="td_title">就诊卡号：</td>
+            <td style="width:15%"><input class="easyui-textbox" id="patientaccount"  style="width:100%;"/></td>
+            <td style="width:10%" class="td_title">健康号：</td>
+            <td style="width:15%"><input class="easyui-textbox" id="patientid"  style="width:100%;"/></td>
+        </tr>
+        <tr>
+            <td class="td_title">末次检查日期：</td>
+            <td><input class="easyui-datebox" id="s_lastvisidate" style="width:45%;" />-<input class="easyui-datebox" id="e_lastvisidate"  style="width:45%;" /></td>
+            <td class="td_title">检查孕周：</td>
+            <td><input class="easyui-textbox" id="checkweek_s" style="width:48%;" value="28" />-<input class="easyui-textbox" id="checkweek_e"  style="width:48%;" /></td>
+            <td class="td_title">末次检查医生：</td>
+            <td><input class="easyui-textbox" id="lastdoctorname" style="width:100%;"/></td>
+            <td class="td_title">就诊科室：</td>
+            <td><input class="easyui-textbox" id="departmentname" style="width:100%;"/></td>
+        </tr>
+        <tr>
+            
+            <td class="td_title">高危等级：</td>
+            <td><input class="easyui-combobox" id="highrisklevel" style="width:95%;"/></td>
+            <td class="td_title">传染病：</td>
+            <td><input class="easyui-combobox" id="infectdisease" style="width:100%;"/></td>
+            <td class="td_title">高危因素：</td>
+            <td><input class="easyui-combotree" id="highriskreason" style="width:100%;"/></td>
+            <td class="td_title">是否高危：</td>
+            <td><input class="easyui-combobox" id="hashighrisk" style="width:100%;"/></td>
+        </tr>
+        <tr> 
+            <td class="td_title">预约日期：</td>
+            <td><input class="easyui-datebox" id="s_followupappointment" style="width:45%;" />-<input class="easyui-datebox" id="e_followupappointment" style="width:45%;" /></td>
+            <td class="td_title">超预约天数：</td>
+            <td><input class="easyui-textbox" id="overday_s" style="width:48%;"  value="7"/>-<input class="easyui-textbox" id="overday_e"  style="width:48%;" /></td>
+            <td class="td_title">是否追访：</td>
+            <td><input class="easyui-combobox" id="hasvisit" style="width:100%;"/></td>
+            <td class="td_title">是否已建大卡：</td>
+            <td><input class="easyui-combobox" id="haskcal" style="width:100%;"/></td>
+        </tr>
+        <tr>
+            <td colspan="8" style=" text-align:center;">                
+                <a class="easyui-linkbutton" id="btn_search">检索</a> 
+            </td>
+        </tr>
+    </table>
+    </div>
+    
+    
+</div>
+<div>
+    <table id="highriskvisitlist"></table>
+</div>
+<!--弹窗-->
+<div id="win_chasevisit" class="mywindow" data-maximize="false" data-width="640" data-height="400" data-modal="true" data-url="Page_One_HighRiskVisit.aspx" data-title="追访信息" data-minimizable="false" data-maximizable="false" data-collapsible="false" event-callback="callback_highriskvisit" ></div>
+
+<script type="text/javascript" language="javascript">
+    function callback_highriskvisit() {
+        require(["page_highriskvisit", "base_usercontrol"], function (page_highriskvisit, base) {
+            var data_back = base.getattr("#win_chasevisit", "data-back");
+            if (data_back != null && data_back != undefined && data_back != "") {
+                page_highriskvisit.reload();
+            }
+        });
+    }
+</script>
+<script id="visit_template" type="text/x-template">
+<div>
+        <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="form_td form_td_title" style="width:10%;"><span class="form_td_span_title">就诊科室</span></td>
+                <td class="form_td form_td_ctrl" style="width:15%;">${departmentname}</td>
+                <td class="form_td form_td_title" style="width:10%;"><span class="form_td_span_title">就诊卡号</span></td>
+                <td class="form_td form_td_ctrl" style="width:15%;">${patientaccount}</td>
+                <td class="form_td form_td_title" style="width:10%;"><span class="form_td_span_title">健康号</span></td>
+                <td class="form_td form_td_ctrl" style="width:15%;">${patientid}</td>
+                <td class="form_td form_td_title" style="width:10%;"><span class="form_td_span_title">身份证号</span></td>
+                <td class="form_td form_td_ctrl" style="width:15%;">${idcard}</td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">高危因素</span></td>
+                <td class="form_td form_td_ctrl" colspan="7">${highriskreason}</td>
+            </tr>
+            <tr>                            
+                <td class="form_td form_td_title"><span class="form_td_span_title">处理建议</span></td>
+                <td class="form_td" colspan="7">{{html suggestion}}</td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">健康宣教</span></td>
+                <td class="form_td" colspan="7">{{html guide}}</td>
+            </tr>
+        </table>
+        </div>
+</script>

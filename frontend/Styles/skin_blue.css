@@ -1,0 +1,106 @@
+﻿/* Buttons
+---------------------------------------------------------------------*/
+a.btn 
+{
+	display: inline-block;
+    padding:3px 6px 3px 6px;
+	color: white !important;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 13px;
+	/*font-family: "Microsoft YaHei",Tahoma, Arial, sans-serif;*/
+	position: relative;
+	cursor: pointer;
+	border:1px solid #ccc !important;
+    background-color:#4eb5f7;
+}
+a.btn:hover, a.btn:focus, a.btn:active,a.btn_checked
+{
+	opacity:0.96;
+	-khtml-opacity: .96;
+	-moz-opacity: 0.96;
+	-moz-box-shadow:0 0 5px rgba(182, 168, 236, 0.5);
+	-webkit-box-shadow: 0 0 5px rgba(182, 168, 236, 0.5);
+	box-shadow: 0 0 5px rgba(182, 168, 236, 0.5);
+    background-color:#439dd7;
+}
+.back_class_light_1{background: #6CA6CD;}
+.border_class_light_1{border:2px solid #6CA6CD;}
+
+.back_class_light{background: #4eb5f7;}
+.border_class_light{border:2px solid #4eb5f7;}
+
+.back_class_deep{background: #439dd7;}
+.border_class_deep{border:2px solid #439dd7;}
+
+.border_class_deep_top{border-top:4px solid #439dd7;}
+.border_class_deep_bottom{border-bottom:4px solid #439dd7;}
+
+.font_class_deep{color:#439dd7}
+
+fieldset {
+	border:0 none;
+	border-top:2px solid #439dd7;
+	margin:1px 0;
+	padding:1px 0;
+	position:relative;
+}
+fieldset.allborder 
+{
+    border:0 none;
+	border-top:1px solid #439dd7;
+	margin:2px 0;
+	padding:0px 0;
+	position:relative;
+}
+legend {
+	background: transparent;
+	color:#6CA6CD;
+	font-weight:bold;
+	padding:0 6px 0 0;
+	text-align:left;
+}
+.combobox-item-selected,.tree-node-selected,.calendar-selected,.datagrid-row-selected,.tabs-header .tabs-pill li.tabs-selected a.tabs-inner,.progressbar-value, .progressbar-value .progressbar-text
+{
+    background-color:#4eb5f7;
+    border-color:#4eb5f7;
+    color:Black;
+}
+.tree-node-selected .font_class_deep{color:Black;}
+.magnifier
+{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    background:url('../Images/magnifier-blue.png') no-repeat ;    
+}
+.minus
+{
+    display:inline-block;
+    width:14px;
+    height:14px;
+    background:url('../Images/minus-blue.png') no-repeat;  
+    background-position :center top; 
+}
+.plus
+{
+    display:inline-block;
+    width:14px;
+    height:14px;
+    background:url('../Images/plus-blue.png') no-repeat;    
+    background-position :center top;
+}
+tr.open{background-color:#6CA6CD;}
+.trbase:hover 
+{
+    background-color:#6CA6CD;/*#cacacd;d9ead3*/ 
+}
+.calendar-today{color:#000;}
+
+.checkbox {
+  border: 2px solid #00bbee;
+}
+.checkbox-checked {
+  border: 0;
+  background: #00bbee;
+}

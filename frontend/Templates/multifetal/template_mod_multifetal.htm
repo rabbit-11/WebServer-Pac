@@ -1,0 +1,9 @@
+﻿<tr  data-index="${index}">
+    <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_heartrate" data-index="${index}" data-value="${heartrate}" data-group="${group}" data-min="0" data-max="200"></td>
+    <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_position" data-index="${index}" data-value="${position}" data-group="${group}" data-url="../Services/ConfigService.asmx/Select?q=position" data-panelHeight="200" event-onchanged="position_changed"></td>
+    <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_presentposition"  data-value="${presentposition}" data-index="${index}" data-group="${group}" data-url="../Services/ConfigService.asmx/Select?q=presentposition" style="position:relative;"></td>
+    <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_fetalmove" data-index="${index}" data-value="${fetalmove}" data-group="${group}" data-url="../Services/ConfigService.asmx/Select?q=fetalmove" ></td>    
+    <td class="form_td">
+        <a class="plus btnlink" title="增加胎次" ></a><a class="minus btnlink" title="删除胎次"></a>
+    </td>
+</tr>

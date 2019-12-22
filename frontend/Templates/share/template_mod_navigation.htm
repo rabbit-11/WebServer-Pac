@@ -1,0 +1,15 @@
+﻿<fieldset>
+    <legend>
+        <div id="navigation_wrapper"></div>
+    </legend>
+</fieldset>
+
+
+<!--模板-->
+<script id="navigation_template" type="text/x-template">
+<a class="btn ${btnchecked}" href="${href}" style="display:${visible}" target="_self" id="${key}"><img src="../Images/icon${id}.png" alt="" align="absmiddle" style="border-width:0px;display:inline-block;margin-right:6px;">${text}</a><span style="display:inline-block;width:3px;"></span>
+</script>
+
+<script type="text/javascript"  language="javascript">
+    require(["navigation"], function (a) {  a.show(); });
+</script>

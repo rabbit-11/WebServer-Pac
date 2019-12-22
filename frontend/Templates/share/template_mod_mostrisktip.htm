@@ -1,0 +1,13 @@
+﻿<div id="masterrisk" class="hidden">
+    <span style="width:60%;display:inline-block;">
+        <span style="margin-left:10px; display:inline-block;">极危报警：<span id="masterrisktip_tips"></span>，请尽快联系患者。</span>
+    </span>
+    <span style="width:39%;display:inline-block; text-align:right">
+        <!--<asp:HyperLink ID="hl_mostrisktip" runat="server" Target="_blank" Font-Underline="true" CssClass="hidden">查看联系方式和档案</asp:HyperLink>-->
+        <span style="margin-right:10px; display:inline-block;"><a  target="_blank" class="mylink" id="link_pregnantsummary">查看联系方式和档案</a></span>
+    </span>
+</div> 
+
+<script type="text/javascript"  language="javascript">
+    require(["mostrisktip"], function (a) { a.show(); }); 
+</script>

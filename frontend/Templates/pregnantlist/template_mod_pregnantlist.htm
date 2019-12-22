@@ -1,0 +1,17 @@
+﻿
+    <div id="pregnantlist_querywrapper" class="querywrapper" style="margin-bottom:10px;">
+        <input class="easyui-datebox" id="dateofprenatal_s" data-options="prompt:'起始 预产期'" style="width:10%;">-<input class="easyui-datebox" id="dateofprenatal_e" " data-options="prompt:'结束 预产期'"style="width:10%;">
+
+        <input class="easyui-textbox" id="xingming" data-options="prompt:'姓名'" style="width:10%;">
+        <input class="easyui-textbox" id="shenfenzh" data-options="prompt:'身份证号'" style="width:10%;">
+        <input class="easyui-textbox" id="jiuzhenkh" data-options="prompt:'就诊卡号'" style="width:10%;">
+        <select class="easyui-combobox" id="status" style="width:6%;">
+            <option value="-1">全部</option>
+            <option value="0">未结案</option>
+            <option value="1">已结案</option>
+        </select>
+        <a class="easyui-linkbutton" id="btn_search"  style="height:23px;width:60px;">检索</a>
+    </div>
+    <div>
+        <table id="pregnantlist"></table>
+    </div>

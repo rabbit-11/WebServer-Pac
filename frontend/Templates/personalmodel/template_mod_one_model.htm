@@ -1,0 +1,37 @@
+﻿<div style="width:96%;margin:10px auto; position:relative;min-height:320px;">
+    <table width="100%" cellpadding="0" cellspacing="0" class="customtable">
+        <tr>
+            <td class="form_td form_td_title form_td_widthflag"><span style="display:inline-block;width:78px;"></span></td>
+            <td class="form_td" colspan="7"></td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title"><span class="form_td_span_title">模板名称</span></td>
+            <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_diseasename" colspan="5" data-value="${diseasename}" data-placeholder="" data-required="true"></td>
+            <td class="form_td form_td_title"><span class="form_td_span_title">阶段</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_stage" data-value="${stage}" data-url="../Services/ConfigService.asmx/Select?q=stage" data-required="true"></td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title"><span class="form_td_span_title">模板内容</span></td>
+            <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_guide" colspan="7" data-rows="8" data-height="230" data-value="${guide}" data-required="true"></td>
+        </tr>
+        <tr class="tr_share_wrapper">
+            <td class="form_td form_td_title"><span class="form_td_span_title">共享</span></td>
+            <td class="form_td form_td_ctrl td_combobox " data-id="tmpl_publicstatus" data-value="${publicstatus}"  data-url="../Services/ConfigService.asmx/Select?q=shifou4"></td>
+        </tr>
+    </table>
+    <div style="position:absolute;bottom:10px; text-align:center;width:100%;">
+        <a class="easyui-linkbutton l-btn l-btn-small btn_model_save">
+            <span class="l-btn-left">
+                <span class="l-btn-text">保存</span>
+            </span>
+        </a>
+    </div>
+</div>
+<div class="hidden">
+    <input type="text" class="form_td_ctrl td_hidden" value="${id}" data-id="tmpl_id"  data-value="${id}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${modeltypeid}" data-id="tmpl_modeltypeid"  data-value="${modeltypeid}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${doctorid}" data-id="tmpl_doctorid"  data-value="${doctorid}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${doctorname}" data-id="tmpl_doctorname"  data-value="${doctorname}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${platformid}" data-id="tmpl_platformid"  data-value="${platformid}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${jigoudm}" data-id="tmpl_jigoudm"  data-value="${jigoudm}"/>
+</div>

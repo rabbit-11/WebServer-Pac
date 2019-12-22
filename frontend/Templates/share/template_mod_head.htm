@@ -1,0 +1,36 @@
+<div id="head_wrapper" class="border_class_deep">
+        <div  style="text-align:center;">
+            <!--<img src="../Images/loading.gif" title="正在加载" alt="正在加载" />正在加载，请稍候...-->
+        </div>
+    </div>
+    <script id="head_template" type="text/x-template">
+    <div class="clearfix back_class_deep" id="setting">
+        <div class="posrl" style="display:inline-block;text-align:left;margin-top:8px;margin-left:8px;">
+            <span class="spanbase" id="head_personname_wrapper">
+            <b>${personname}</b>
+            </span>
+            <!-- <span class="spanbase" id="header_info_wrapper">${pregnantinfo}</span> -->
+        </div>
+        <div class="posrl" style="display:inline-block;text-align:left;font-size:9px;float:right;">
+            <span style="margin-left:35px;display:inline-block;" id="setting_wrapper">
+            </span>
+        </div>
+    </div>
+    
+    <script type="text/javascript"  language="javascript">
+        require(["head"], function (a) { a.show(); });
+        function callback_pregnantinfo_simple() {
+    
+            require(["head"], function (a) { a.show(); });
+            //只更新随访界面，孕妇档案界面暂不更新，因预产期属于孕妇档案范畴
+            require(["list_visitrecord", "base_usercontrol","page_firstrecord", "jextend"], function (list_visitrecord, base,firstrecord) {
+                var data_back = base.getattr("#win_pregnantinfo_simple", "data-back");
+                if (data_back != null && data_back != undefined && data_back != "") {
+                    var data = JSON.parse(data_back);
+                    list_visitrecord.linkage_Dateofprenatal(myextend.myparser(data.dateofprenatal));
+                    firstrecord.linkage_Dateofprenatal(myextend.myparser(data.dateofprenatal));
+                }
+            });
+    //        require(["list_visitrecord"], function (a) { a.linkage_Dateofprenatal(myextend.myparser(dateofprenatal)); });
+        }
+    </script>

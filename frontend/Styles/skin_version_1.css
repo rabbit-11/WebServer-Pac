@@ -1,0 +1,45 @@
+﻿/*global.css*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    font-size:14px;
+    font-family: 'Microsoft YaHei','Open Sans',KaiTi,FangSong,SimHei,Sans-serif,SimSun,Arial, Verdana,Tahoma;
+}
+/*layout.css*/
+#page_wrapper,.page_wrapper{width:98%;margin:10px auto;}
+.visitrecord_left_min{width:84px;float:left;}
+.visitrecord_right_min{ margin-left:90px;overflow:hidden;}
+#postnatalvisitrecord_titlespan{width:128px;}
+/*头部*/
+#header_info_wrapper{font-size:14px;margin-left:14px;}
+#header_personname_wrapper{font-size:18px;}
+
+a.btn 
+{
+	font-size: 16px;
+}
+
+a.btn:hover, a.btn:focus, a.btn:active,a.btn_checked
+{
+    /*background-color:#d2f4f0;*/
+}
+a.btn_1
+{
+	font-size: 14px;
+}
+/*.alert-success{background-color:#3ec882;border-color:#3ec872;}*/
+
+
+/*easyui.css*/
+
+.textbox .textbox-text {
+  font-size: 14px;
+}
+/*.panel-title{text-align:center;padding-top:6px;padding-bottom:6px;color:#7D7680;}
+.panel-header,.panel-title{background-color:#EAF6F9;}
+.window{padding:0px;}
+.window .window-header{padding-bottom:0px;}*/
+
+.calendar table,.calendar-title span,.calendar table td, .calendar table th,.datebox-button a,.tree-title{font-size:14px;}

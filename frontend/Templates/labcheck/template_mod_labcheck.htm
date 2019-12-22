@@ -1,0 +1,157 @@
+﻿<div class="back_class_deep back_class_common">
+    <div style="margin-left:9px; font-size:16px;">
+        <a class="btnlink nosave" id="btn_save"><img src="../Images/queding.png" alt=""/>保存</a>
+    </div>
+</div>
+
+<div class="div_form_wrapper border_wrapper">
+    <div id="form_wrapper" style="width:96%;margin:6px auto 6px auto;">
+        <table width="100%" cellpadding="0" cellspacing="0" class="customtable">
+            <tr>
+                <td class="form_td form_td_title form_td_widthflag"><span style="display:inline-block;width:88px;"></span></td>
+                <td class="form_td form_td_ctrl" colspan="7"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>28周前</legend></fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血常规</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_eblood" data-value="${eblood}" data-url="../Services/ConfigService.asmx/Select?q=eblood" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">尿常规</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_eurine" data-value="${eurine}" data-url="../Services/ConfigService.asmx/Select?q=eurine" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">凝血常规</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_ecoagulation" data-value="${ecoagulation}" data-url="../Services/ConfigService.asmx/Select?q=ecoagulation" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">致畸五项</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_eteratogenic" data-value="${eteratogenic}" data-url="../Services/ConfigService.asmx/Select?q=eteratogenic" data-multiple="true" data-allowtext="true"></td>
+            </tr>
+            
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">肝功能</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_eliverfunction" data-value="${eliverfunction}" data-url="../Services/ConfigService.asmx/Select?q=eliverfunction" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">肾功能</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_erenalfunction" data-value="${erenalfunction}" data-url="../Services/ConfigService.asmx/Select?q=erenalfunction" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">TBA</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_etba" data-value="${etba}" data-url="../Services/ConfigService.asmx/Select?q=etba" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">乙肝</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_ehepatitisb" data-value="${ehepatitisb}" data-url="../Services/ConfigService.asmx/Select?q=ehepatitisb" data-multiple="true" data-allowtext="true"></td>
+            </tr>     
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">甲肝</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_ehepatitisa" data-value="${ehepatitisa}" data-url="../Services/ConfigService.asmx/Select?q=ehepatitisa" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">丙肝</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_ehcv" data-value="${ehcv}" data-url="../Services/ConfigService.asmx/Select?q=ehcv" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">HIV</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_ehiv" data-value="${ehiv}" data-url="../Services/ConfigService.asmx/Select?q=ehiv" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">梅毒</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_esyphilis" data-value="${esyphilis}" data-url="../Services/ConfigService.asmx/Select?q=esyphilis" data-multiple="true" data-allowtext="true"></td>
+            </tr>     
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">甲功</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_ethyroidfunction" data-value="${ethyroidfunction}" data-url="../Services/ConfigService.asmx/Select?q=ethyroidfunction" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">阴道分泌物</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_evaginaldischarge" data-value="${evaginaldischarge}" data-url="../Services/ConfigService.asmx/Select?q=evaginaldischarge" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">ECG</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_eecg" data-value="${eecg}" data-url="../Services/ConfigService.asmx/Select?q=eecg" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">唐氏筛查</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_escreening" data-value="${escreening}" data-url="../Services/ConfigService.asmx/Select?q=escreening" data-multiple="true" data-allowtext="true"></td>
+            </tr>   
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">无创DNA</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_edna" data-value="${edna}" data-url="../Services/ConfigService.asmx/Select?q=edna" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">OGTT</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_eogtt" data-value="${eogtt}" data-url="../Services/ConfigService.asmx/Select?q=eogtt" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">空腹血糖</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_ebloodsugar" data-value="${ebloodsugar}" data-url="../Services/ConfigService.asmx/Select?q=ebloodsugar" data-multiple="true" data-allowtext="true"></td>
+            </tr>         
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">ABO血型</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_bloodtypecode" data-value="${bloodtypecode}" data-url="../Services/ConfigService.asmx/Select?q=bloodtypecode"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">Rh血型</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_rhbloodcode" data-value="${rhbloodcode}" data-url="../Services/ConfigService.asmx/Select?q=rhbloodcode"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>28-36</legend></fieldset>
+                </td>
+            </tr>
+                   
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血常规</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_lblood" data-value="${lblood}" data-url="../Services/ConfigService.asmx/Select?q=lblood" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">尿常规</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_lurine" data-value="${lurine}" data-url="../Services/ConfigService.asmx/Select?q=lurine" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">凝血常规</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_lcoagulation" data-value="${lcoagulation}" data-url="../Services/ConfigService.asmx/Select?q=lcoagulation" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">肝功能</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_lliverfunction" data-value="${lliverfunction}" data-url="../Services/ConfigService.asmx/Select?q=lliverfunction" data-multiple="true" data-allowtext="true"></td>
+               
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">TBA</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_ltba" data-value="${ltba}" data-url="../Services/ConfigService.asmx/Select?q=ltba" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">糖化蛋白</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_lglyhemoglobin" data-value="${lglyhemoglobin}" data-url="../Services/ConfigService.asmx/Select?q=lglyhemoglobin" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">GBS</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_lgbs" data-value="${lgbs}" data-url="../Services/ConfigService.asmx/Select?q=lgbs" data-multiple="true" data-allowtext="true"></td>
+                
+                <td class="form_td form_td_title"><span class="form_td_span_title">空腹血糖</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_lbloodsugar" data-value="${lbloodsugar}" data-url="../Services/ConfigService.asmx/Select?q=lbloodsugar" data-multiple="true" data-allowtext="true"></td>
+            </tr>    
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>36周后</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血常规</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_mblood" data-value="${mblood}" data-url="../Services/ConfigService.asmx/Select?q=mblood" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">尿常规</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_murine" data-value="${murine}" data-url="../Services/ConfigService.asmx/Select?q=murine" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">凝血常规</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_mcoagulation" data-value="${mcoagulation}" data-url="../Services/ConfigService.asmx/Select?q=mcoagulation" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">肝功能</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_mliverfunction" data-value="${mliverfunction}" data-url="../Services/ConfigService.asmx/Select?q=mliverfunction" data-multiple="true" data-allowtext="true"></td>
+               
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">TBA</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_mtba" data-value="${mtba}" data-url="../Services/ConfigService.asmx/Select?q=mtba" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">糖化蛋白</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_mglyhemoglobin" data-value="${mglyhemoglobin}" data-url="../Services/ConfigService.asmx/Select?q=mglyhemoglobin" data-multiple="true" data-allowtext="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">GBS</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_mgbs" data-value="${mgbs}" data-url="../Services/ConfigService.asmx/Select?q=mgbs" data-multiple="true" data-allowtext="true"></td>
+                
+                <td class="form_td form_td_title"><span class="form_td_span_title">空腹血糖</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_mbloodsugar" data-value="${mbloodsugar}" data-url="../Services/ConfigService.asmx/Select?q=mbloodsugar" data-multiple="true" data-allowtext="true"></td>
+            </tr>  
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>其他结果</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">NT</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_nt" data-value="${nt}" colspan="7"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">结构B超</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_abnormalbscan" data-value="${abnormalbscan}" colspan="7"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">其他</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_otherresult" data-value="${otherresult}" colspan="7" data-rows="5" data-height="100"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="hidden">
+    <input type="text" class="form_td_ctrl td_hidden" value="${id}" data-id="tmpl_id" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${doctorname}" data-id="tmpl_doctorname" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${doctorid}" data-id="tmpl_doctorid" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${pregnantinfoid}" data-id="tmpl_pregnantinfoid" />
+</div>
+

@@ -1,0 +1,21 @@
+﻿<div id="chufang_wrapper"></div>
+<div class="clearfix" style="margin-bottom:20px;">
+    <div style="width:49.5%;float:left;" id="myleft_wrapper">
+    </div>
+    <div style="width:49.5%;margin-left:50.5%;" id="myright_wrapper">
+    </div>
+</div>
+<script id="list_chufang_template" type="text/x-template">
+<div style="border:1px solid  #000;min-height:80px;margin-bottom:10px;">
+    <div style="margin:4px;">
+        <div><b>日期：${XIUGAISJ}</b></div>   
+        <div class="one_chufang_wrapper" data-index="${index}"></div>
+    </div>
+</div>    
+</script>
+
+<script id="one_chufang_template" type="text/x-template">
+    <span class="chufang_text">${YAOPINMC}</span>
+    <span class="chufang_text">${SHULIANG} + ${BAOZHUANGDW}</span>
+    <span class="chufang_text">${PINCIMC}</span>
+</script>

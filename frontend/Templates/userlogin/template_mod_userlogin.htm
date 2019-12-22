@@ -1,0 +1,54 @@
+﻿<style type="text/css">
+    p{padding:5px;}
+    .container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        font-size: 0;
+        white-space: nowrap;
+        overflow: auto;
+    }
+
+    .container:after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .dialog {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        font-size: 14px;
+        white-space: normal;
+         width:350px;
+         height:400px;
+    } 
+    </style>
+<div class="container querywrapper">
+      <div class="dialog ">
+            <div  class="easyui-panel" data-options="{title:'职工登录'}">
+                <div style="width:90%;margin:10px auto;">
+                    <p><input class="easyui-textbox" id="cb_jigoudm" data-options="prompt:'机构名称'" style="width:100%;"/></p> 
+                    <p><select id="cb_route" class="easyui-combobox" name="cb_route"  style="width:100%;" data-options="prompt:'系统选择'">
+                            <option value="1">预诊台</option>
+                            <option value="2">产检追访</option>
+                        </select>
+                    </p>
+                    <p><input class="easyui-textbox" id="tb_jobnumber" data-options="prompt:'职工工号'" style="width:100%;"/></p>
+                    <p><input class="easyui-textbox" id="tb_doctorname" data-options="prompt:'职工姓名'" style="width:100%;"/></p>
+                   
+                    <p style=" text-align:center;">
+                        <a class="easyui-linkbutton ebtn" id="btn_login" >登录</a>
+                    </p>
+                    <p>
+                        <span id="lb_error" style=" color:Red;"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>

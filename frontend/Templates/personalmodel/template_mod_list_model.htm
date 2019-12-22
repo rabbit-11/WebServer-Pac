@@ -1,0 +1,24 @@
+﻿
+    <div id="list_model_wrapper" class="easyui-tabs">
+    </div>
+<script id="list_model_template" type="text/x-template">
+<div title="${name}" data-options="" style="padding:10px; display:none;"> 
+    <div  data-modeltypeid="${id}" class="grid_wrapper">
+        <div class="modelgrid" data-modeltypeid="${id}" data-platformid="${platformid}" style="width:100%;"></div>
+    </div>
+</div>
+</script>
+<!--弹窗-->
+<div id="win_model" class="mywindow" data-maximize="false" data-width="700" data-height="400" data-modal="true" data-url="Page_One_PersonalModel.aspx" data-title="模板信息" data-minimizable="false" data-maximizable="false" data-collapsible="false" event-callback="callback_model" data-back=""></div>
+
+<script type="text/javascript" language="javascript">
+    function callback_model() {
+        require(["page_personalmodel","base_usercontrol"], function (page_personalmodel,base) {
+            var data_back = base.getattr("#win_model", "data-back");
+            if (data_back != null && data_back != undefined && data_back != "") {
+                var data = JSON.parse(data_back);
+                page_personalmodel.reload(data);
+            }
+        });
+    }
+</script>

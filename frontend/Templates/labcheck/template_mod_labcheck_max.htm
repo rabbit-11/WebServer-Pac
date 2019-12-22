@@ -1,0 +1,24 @@
+﻿<div class="back_class_light_1 labcheck_title" style="margin-bottom:10px; position:relative;">
+    <!--<a class="btnlink" id="btn_addnewvisit" style="text-decoration:underline;">新增产检</a>-->
+    <a class="btnlink" id="btn_labcheck" style="text-decoration:underline;">编辑检验</a>
+    <a class="btnlink" id="btn_importlabcheck" style="text-decoration:underline;">导入</a>
+    <a id="btn_labcheck_min" style=" cursor:pointer;position:absolute;right:4px;top:0px;height:30px; display:inline-block; width:30px; text-align:right;">
+        <img src="../Images/arrow_left.png" alt="" align="top" style="display:inline-block;margin-top:10px;">
+    </a>
+</div>
+<div class="border_class_light_1">
+    <div id="labcheck_28_before_wrapper"></div>
+    <div id="labcheck_28_36_wrapper"></div>
+    <div id="labcheck_36_after_wrapper"></div>
+    <div id="labcheck_other_wrapper"></div>
+</div>
+
+<!--弹窗-->
+<div id="win_labcheck" class="mywindow" data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="Page_LabCheck.aspx" data-title="常规检验信息" data-minimizable="false" data-maximizable="false" data-collapsible="false" event-callback="callback_labcheck" ></div>
+
+<script type="text/javascript" language="javascript">
+    function callback_labcheck() {
+        require(["header"], function (a) { a.show(); });
+        require(["mod_labcheck_max"], function (a) { a.reload(); });
+    }
+</script>

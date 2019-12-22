@@ -1,0 +1,247 @@
+﻿ <div class="back_class_deep back_class_common">
+    <a class="btnlink" id="btn_save_exam"><img src="../Images/queding.png" alt=""/>保存</a>
+    <a class="btnlink" id="btn_import_exam"><img src="../Images/btn_import.png" alt=""/>导入</a>
+</div>
+
+
+<div class="div_form_wrapper border_wrapper">
+    <div id="form_wrapper_exam" style="width:96%;margin:6px auto 6px auto;">
+        <table width="100%" cellpadding="0" cellspacing="0" class="customtable customtable_exam">
+            <tr>
+                <td class="form_td form_td_title form_td_widthflag"><span style="display:inline-block;width:130px;"></span></td>
+                <td class="form_td form_td_ctrl" colspan="7"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>体格检查</legend></fieldset>
+                </td>
+            </tr>
+            <tr>	
+                <td class="form_td form_td_title"><span class="form_td_span_title">心脏杂音</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_xinzangzy" data-value="${xinzangzy}" data-url="../Services/ConfigService.asmx/Select?q=xinzangzy"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">心脏杂音详述</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_xinzangzyxs" data-value="${xinzangzyxs}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">心脏是否异常</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_xin" data-value="${xin}" data-url="../Services/ConfigService.asmx/Select?q=xin"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">心脏异常详述</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_xinxs" data-value="${xinxs}"></td>
+            </tr>	
+            <tr>	
+                <td class="form_td form_td_title"><span class="form_td_span_title">肺部是否异常</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_fei" data-value="${fei}" data-url="../Services/ConfigService.asmx/Select?q=fei"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">肺部异常详述</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_feixs" data-value="${feixs}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">体格检查其他异常</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_qitayc" data-value="${qitayc}" data-url="../Services/ConfigService.asmx/Select?q=qitayc"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">体格检查异常详述</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_qitaycxs" data-value="${qitaycxs}"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>妇科检查</legend></fieldset>
+                </td>
+            </tr>
+            <!--<tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">妇科检查</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_fukejc" data-value="${fukejc}" data-url="../Services/ConfigService.asmx/Select?q=fukejc"></td>
+            </tr>-->
+            <tr>	
+                <td class="form_td form_td_title"><span class="form_td_span_title">外阴</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_waiyin" data-value="${waiyin}" data-url="../Services/ConfigService.asmx/Select?q=waiyin"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">外阴详述</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_waiyinxs" data-value="${waiyinxs}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">阴道</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_yindaoy" data-value="${yindaoy}" data-url="../Services/ConfigService.asmx/Select?q=yindaoy"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">阴道详述</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_yindaoyxs" data-value="${yindaoyxs}"></td>
+            </tr>
+            <tr>	
+                <td class="form_td form_td_title"><span class="form_td_span_title">宫颈</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_gongjingy" data-value="${gongjingy}" data-url="../Services/ConfigService.asmx/Select?q=gongjingy"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">宫颈详述</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_gongjingyxs" data-value="${gongjingyxs}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">子宫</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_zigongjl" data-value="${zigongjl}" data-url="../Services/ConfigService.asmx/Select?q=zigongjl"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">子宫详述</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_zigongjlxs" data-value="${zigongjlxs}"></td>
+            </tr>
+            <tr>	
+                <td class="form_td form_td_title"><span class="form_td_span_title">附件</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_fujianzw" data-value="${fujianzw}" data-url="../Services/ConfigService.asmx/Select?q=fujianzw"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">附件详述</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_fujianzwxs" data-value="${fujianzwxs}"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>骨盆测量</legend></fieldset>
+                </td>
+            </tr>	
+            <!--<tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">骨盆外测量</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_sfywpgwcl" data-value="${sfywpgwcl}" data-url="../Services/ConfigService.asmx/Select?q=sfywpgwcl"></td>
+            </tr>-->
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">髂棘间径(cm)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_qiajijj_one" data-value="${qiajijj_one}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">髂嵴间径(cm)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_qiajijj_two" data-value="${qiajijj_two}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">骶耻外径(cm)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_dichiwj" data-value="${dichiwj}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">出口横径(cm)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_chukouhj" data-value="${chukouhj}"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>辅助检查</legend></fieldset>
+                </td>
+            </tr>		
+            <!--<tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">辅助检查</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_sfywfzjc" data-value="${sfywfzjc}" data-url="../Services/ConfigService.asmx/Select?q=sfywfzjc"></td>
+            </tr>-->	
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血红蛋白(g/dl)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_xuehongdb" data-value="${xuehongdb}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">白细胞计数</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_baoxibjs" data-value="${baoxibjs}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血小板计数</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_xiexiaobjs" data-value="${xiexiaobjs}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血常规其他</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_xuechangguiqt" data-value="${xuechangguiqt}"></td>
+            </tr>
+            
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">尿蛋白评价</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_niaodanbpj" data-value="${niaodanbpj}" data-url="../Services/ConfigService.asmx/Select?q=niaodanbpj"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">尿糖</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_niaotang" data-value="${niaotang}" data-url="../Services/ConfigService.asmx/Select?q=niaotang"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">尿酮体</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_niaotongt" data-value="${niaotongt}" data-url="../Services/ConfigService.asmx/Select?q=niaotongt"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">尿潜血</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_niaoqianx" data-value="${niaoqianx}" data-url="../Services/ConfigService.asmx/Select?q=niaoqianx"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">尿白血球</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_niaobaixq" data-value="${niaobaixq}" data-url="../Services/ConfigService.asmx/Select?q=niaobaixq"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">尿常规其他</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_niaochuangguiqt" data-value="${niaochuangguiqt}" data-url="../Services/ConfigService.asmx/Select?q=niaochuangguiqt"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">ABO血型</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_aboxuexing" data-value="${aboxuexing}" data-url="../Services/ConfigService.asmx/Select?q=aboxuexing"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">RH血型</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_rhxuexing" data-value="${rhxuexing}" data-url="../Services/ConfigService.asmx/Select?q=rhxuexing"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血糖检查类型</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_xuetangpj" data-value="${xuetangpj}" data-url="../Services/ConfigService.asmx/Select?q=xuetangpj"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血糖值mmol/L</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_xuetangzhi" data-value="${xuetangzhi}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血糖值2</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_xuetz" data-value="${xuetz}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血糖值3</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_xtangz" data-value="${xtangz}"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血清谷丙转氨酶(U/L)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_xueqinggbzam" data-value="${xueqinggbzam}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血清谷草转氨酶(U/L)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_xueqinggczam" data-value="${xueqinggczam}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">白蛋白(g/L)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_baidb" data-value="${baidb}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">总胆红素(μmol/L)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_zongdanhs" data-value="${zongdanhs}"></td>
+            </tr>
+            <tr>	
+                <td class="form_td form_td_title"><span class="form_td_span_title">结合胆红素(μmol/L)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_jiehehs" data-value="${jiehehs}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血清肌酐(μmol/L)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_xueqingjq" data-value="${xueqingjq}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">血尿素氮(μmol/L)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_xueniaosd" data-value="${xueniaosd}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">阴道分泌物</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_yindaofmw" data-value="${yindaofmw}" data-url="../Services/ConfigService.asmx/Select?q=yindaofmw"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">阴道分泌物详述</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_yindaofmwxs" data-value="${yindaofmwxs}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">阴道清洁度</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_yindaoqjd" data-value="${yindaoqjd}" data-url="../Services/ConfigService.asmx/Select?q=yindaoqjd"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">沙眼衣原体</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_shayanyyt" data-value="${shayanyyt}" data-url="../Services/ConfigService.asmx/Select?q=shayanyyt"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">淋球菌检测</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_linqiejjc" data-value="${linqiejjc}" data-url="../Services/ConfigService.asmx/Select?q=linqiejjc"></td>
+
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">乙肝表面抗原(HBsAg)</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_yiganky" data-value="${yiganky}" data-url="../Services/ConfigService.asmx/Select?q=yiganky"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">乙型肝炎表面抗体</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_yixgybmkt" data-value="${yixgybmkt}" data-url="../Services/ConfigService.asmx/Select?q=yixgybmkt"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">乙型肝炎e抗原</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_yixgyeky" data-value="${yixgyeky}" data-url="../Services/ConfigService.asmx/Select?q=yixgyeky"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">乙型肝炎e抗体</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_yixgyekt" data-value="${yixgyekt}" data-url="../Services/ConfigService.asmx/Select?q=yixgyekt"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">乙型肝炎核心抗体</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_yixgyhxkt" data-value="${yixgyhxkt}" data-url="../Services/ConfigService.asmx/Select?q=yixgyhxkt"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">梅毒检测</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_meidujc" data-value="${meidujc}" data-url="../Services/ConfigService.asmx/Select?q=meidujc"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">梅毒螺旋体抗体</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_meidu" data-value="${meidu}" data-url="../Services/ConfigService.asmx/Select?q=meidu"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">HIV抗体</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_hiv" data-value="${hiv}" data-url="../Services/ConfigService.asmx/Select?q=hiv"></td>
+            </tr>
+            <tr>	
+                <td class="form_td form_td_title"><span class="form_td_span_title">乙肝表面抗原(定性)</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_ygbmkydx" data-value="${ygbmkydx}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">非梅毒检测</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_fmeidujc" data-value="${fmeidujc}" data-url="../Services/ConfigService.asmx/Select?q=fmeidujc"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">非梅毒抗体</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_fmeidu" data-value="${fmeidu}" data-url="../Services/ConfigService.asmx/Select?q=fmeidu"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">滴度</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_didu" data-value="${didu}"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">B超</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_bchao" data-value="${bchao}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">心电图</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_xindiantu" data-value="${xindiantu}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">甲状腺功能</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_jiazhuangxiangn" data-value="${jiazhuangxiangn}" data-url="../Services/ConfigService.asmx/Select?q=jiazhuangxiangn"></td>
+
+                <td class="form_td form_td_title"><span class="form_td_span_title">TSH(pmol/L)</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_tsh" data-value="${tsh}"></td>
+            </tr>
+            <tr>
+                
+                <td class="form_td form_td_title"><span class="form_td_span_title">FT3</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_ft3" data-value="${ft3}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">TT3</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_tt3" data-value="${tt3}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">FT4</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_ft4" data-value="${ft4}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">TT4</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_tt4" data-value="${tt4}"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">ATG</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_atg" data-value="${atg}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">ATPO</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_atpo" data-value="${atpo}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">宫颈脱落细胞检查</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_gongjingtlxbjc" data-value="${gongjingtlxbjc}" data-url="../Services/ConfigService.asmx/Select?q=gongjingtlxbjc"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">其他检查*详述</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_qitajianchasx" data-value="${qitajianchasx}"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="hidden">
+    <input type="text" class="form_td_ctrl td_hidden" value="${id}" data-id="tmpl_id" data-value="${id}" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${pregnantinfoid}" data-id="tmpl_pregnantinfoid" data-value="${pregnantinfoid}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${idcard}" data-id="tmpl_idcard" data-value="${idcard}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${patientid}" data-id="tmpl_patientid" data-value="${patientid}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${pregnantid}" data-id="tmpl_pregnantid" data-value="${pregnantid}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${visitdoctorcode}" data-id="tmpl_visitdoctorcode" data-value="${visitdoctorcode}"  />
+</div>

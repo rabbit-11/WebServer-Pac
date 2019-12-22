@@ -1,0 +1,44 @@
+﻿<div class="back_class_deep" style="height:30px; line-height:30px;width:100%;color:White; position:relative;">
+    <span style=" display:inline-block; width:55%;margin-left:5px;">
+        <a class="btnlink" id="btn_laborder"><img src="../Images/icon9.png" alt=""/>检验</a>
+        <a class="btnlink" id="btn_examorder"><img src="../Images/icon9.png" alt=""/>检查</a>
+        <a class="btnlink" id="btn_chufang"><img src="../Images/icon9.png" alt=""/>处方</a>
+        <a class="btnlink" id="btn_deletevr"><img src="../Images/icon12.png" alt=""/>删除</a>
+        <a class="btnlink" id="btn_add"><img src="../Images/add.png" alt=""/>新增</a>
+    </span>
+    <span style=" display:inline-block; position:absolute;right:14px;width:43%;top:2px; text-align:right; font-size:15px;">
+        <a class="btnlink" id="btn_print"><img src="../Images/dayin.png" alt=""/>打印</a>
+        <a class="btnlink" id="btn_save_top"><img src="../Images/queding.png" alt=""/>保存</a>
+        <a class="btnlink nosave" id="btn_diff" style="text-decoration:none;"  target="_blank"><img src="../Images/icon11.png" alt="" />痕迹</a>
+    </span>
+</div>
+
+<div style="margin-top:10px;">
+    <table cellpadding="0" cellspacing="0" width="100%" style=" text-align:center; border:1px solid #e2e2e2;" >
+        <thead>
+            <tr class="tr_odd" style="height:28px;">
+                <th style="width:16%">日期</th>
+                <th style="width:16%">筛查阶段</th>
+                <th style="width:16%">检查项目</th>
+                <th style="width:20%">B超项目</th>
+                <th style="width:16%">身高(cm)</th>
+                <th style="width:16%">体重(kg)</th>
+            </tr>
+        </thead>
+        <tbody id="list_precheckrequest_tbody_wrapper">
+            <tr>
+                <td colspan="6"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr style="border:1px solid #e2e2e2;"><td colspan="6"></td></tr>
+        </tfoot>
+    </table>
+</div>
+
+<!--弹窗-->
+
+<div id="win_chufang" class="mywindow"  data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="Page_ChuFang.aspx" data-title="处方信息" data-minimizable="false" data-maximizable="false" data-collapsible="false"></div>
+<div id="win_examorder" class="mywindow"  data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="Page_ExamOrder.aspx" data-title="检查信息" data-minimizable="false" data-maximizable="false" data-collapsible="false"></div>
+<div id="win_laborder" class="mywindow"  data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="Page_LabOrder.aspx" data-title="检验信息" data-minimizable="false" data-maximizable="false" data-collapsible="false"></div>
+

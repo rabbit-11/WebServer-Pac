@@ -1,0 +1,109 @@
+﻿
+    <table cellpadding="0" cellspacing="0" width="100%" style=" text-align:center;">
+        <thead>
+            <tr class="tr_laborder_title  tr_odd">
+                <th>姓名</th>
+                <th>检查项目</th>
+                <th>检查时间</th>
+                <th>采样者</th>
+                <th>接收时间</th>
+            </tr>
+        </thead>
+        <tbody id="tbody_laborder_wrapper">            
+        </tbody>
+    </table>
+
+<script id="list_laborder_template" type="text/x-template">
+<tr class="trbase tr_laborder_title" data-index="${index}">
+    <td>${name}</td>
+    <td>${examname}</td>
+    <td>${examtime}</td>
+    <td>${executer}</td>
+    <td>${reporttime}</td>
+</tr> 
+<tr class="hidden">
+    <td colspan="5" class="td_laborder_detail"  data-index="${index}" style="border:1px solid #ededed; ">
+        <div style="width:100%;margin-top:6px;border-top:8px solid #EE4000;border-bottom:8px solid #EE4000;padding-top:10px;padding-bottom:10px;" class="clearfix">
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td style="width:10%;">条码号：</td>
+                    <td style="width:23%;">${orderid}</td>
+                    <td colspan="2" style="font-weight:bold;font-size:18px;text-align:center;width:34%;">
+                        检验报告单
+                    </td>
+                    <td style="width:10%;">样本编号：</td>
+                    <td style="width:23%;">${examcode}</td>
+                </tr>
+                <tr>
+                    <td>姓名：</td>
+                    <td>${name}</td>
+                    <td>申请医生：</td>
+                    <td>${orderdocname}</td>
+                    <td>临床诊断：</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>病人ID号：</td>
+                    <td>${patientid}</td>
+                    <td>申请时间：</td>
+                    <td>${ordertime}</td>
+                    <td>采样时间：</td>
+                    <td>${examtime}</td>
+                </tr>
+                <tr>
+                    <td>科别：</td>
+                    <td>-</td>
+                    <td>采样者：</td>
+                    <td>${executer}</td>
+                    <td>接收时间：</td>
+                    <td>${reporttime}</td>
+                </tr>
+            </table>
+            <div class="clearfix"  class="tr_laborder_nestgrid">
+                <div style="width:49.9%;float:left; text-align:center;">
+                    <table cellspacing="0" cellpadding="0" width="100%">
+                        <thead style="border-top:1px solid black;border-bottom:1px solid black;">
+                            <tr>
+                                <th style="width:40%;">项目</th>
+                                <th style="width:20%;">结果</th>
+                                <th style="width:20%;">参考值</th>
+                                <th style="width:20%;">单位</th>
+                            </tr>
+                        </thead>
+                        <tbody class="sub_tbody_laborder_left_wrapper">
+                        </tbody>
+                    </table>
+                </div>
+                <div style="width:49.9%;margin-left:50%;text-align:center;border-left:1px solid black;">
+                    <table cellspacing="0" cellpadding="0" width="100%">
+                        <thead style="border-top:1px solid black;border-bottom:1px solid black;">
+                            <tr>
+                                <th style="width:40%;">项目</th>
+                                <th style="width:20%;">结果</th>
+                                <th style="width:20%;">参考值</th>
+                                <th style="width:20%;">单位</th>
+                            </tr>
+                        </thead>
+                        <tbody class="sub_tbody_laborder_right_wrapper">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+    </td>
+</tr>
+</script>
+
+<script id="one_labresult_template" type="text/x-template">
+<tr>
+    <td style='text-align:left;'>&nbsp;${setid}&nbsp;${itemname}</td>
+    <td>${value}<span class="must">${resultanalysis}</span></td>
+    <td>${reference}</td>
+    <td>${unit}</td>
+</tr>
+</script>
+
+<style type="text/css">
+.tr_laborder_title{height:25px;border:1px solid #ededed;  cursor:pointer;}
+</style>

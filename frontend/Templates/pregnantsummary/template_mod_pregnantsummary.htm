@@ -1,0 +1,153 @@
+﻿
+    <div style="background-color:#f2f2f2;border:1px solid #ddd">
+        <div id="pregsummary_header"></div>
+    </div>
+    
+    <div id="pregnantsummary_wrapper" class="easyui-tabs">
+        <div title="产检记录" style="display:none;"> 
+            <div class="wr"></div>
+        </div>
+        <div title="检验记录" style=" display:none;"> 
+            <div class="wr"></div>
+        </div>
+        <div title="检查记录" style="display:none;">
+            <div class="wr"></div>
+        </div>
+        <div title="处方记录" style="display:none;">
+            <div class="wr"></div>
+        </div>
+    </div>
+
+<style type="text/css">
+    .td_title{text-align:center;}
+    .td_content{ vertical-align:bottom;text-align:center;}
+    .td_content span{ border-bottom:1px solid black;min-width:9em; display:inline-block;}
+    td.form_td_title {width:3%;border:0px solid black;}
+    td.form_td{border:0px solid black;}
+    td.form_td_ctrl{width:7.5%; }
+    .wr{margin:10px;}
+</style>
+
+<script id="info_template" type="text/x-template">
+<div style="padding:15px;">
+    <table width="100%">
+        <tr>
+            <td class="td_title">姓　　名：</td>
+            <td class="td_content"><span>${personname}</span></td>
+            <td class="td_title">身份证号：</td>
+            <td class="td_content"><span>${idcard}</span></td>
+            <td class="td_title">就诊卡号：</td>
+            <td class="td_content"><span>${patientaccount}</span></td>
+            <td class="td_title">生　　日：</td>
+            <td class="td_content"><span>${birthday}</span></td>
+            <td class="td_title">电　　话：</td>
+            <td class="td_content"><span>${mobilenumber}</span></td>
+            <td style="width:10%;" rowspan="2"><a class="btn" id="hl_view_pregnantdetail" target="_blank">查看完整档案</a></td>
+        </tr>
+        <tr>
+            <td class="td_title">民　　族：</td>
+            <td class="td_content"><span>${nationcode}</span></td>
+            <td class="td_title">婚　　姻：</td>
+            <td class="td_content"><span>${maritalstatuscode}</span></td>
+            <td class="td_title">血　　型：</td>
+            <td class="td_content"><span>${bloodtypecode}${rhbloodcode}</td>
+            <td class="td_title">末次月经：</td>
+            <td class="td_content"><span>${lastmenstrualperiod}</span></td>
+            <td class="td_title">预 产 期：</td>
+            <td class="td_content"><span>${dateofprenatal}</span></td>
+        </tr>
+    </table>
+    <div class="must"  style="text-align:center;padding-top:10px; display:none;font-size:16px;" id="pregsummary_mostrisk_wrapper">
+        
+    </div>
+</div>
+</script>
+
+<script id="visit_template" type="text/x-template">
+<div>
+        <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+                 <td class="form_td form_td_title"><span class="form_td_span_title"></span></td>
+                <td class="form_td form_td_ctrl"></td>
+                 <td class="form_td form_td_title"><span class="form_td_span_title"></span></td>
+                <td class="form_td form_td_ctrl"></td>
+                 <td class="form_td form_td_title"><span class="form_td_span_title"></span></td>
+                <td class="form_td form_td_ctrl"></td>
+                 <td class="form_td form_td_title"><span class="form_td_span_title"></span></td>
+                <td class="form_td form_td_ctrl"></td>
+            </tr>
+            <tr>
+                <td colspan="8" class="form_td">
+                    <fieldset class="allborder"><legend>主诉/诊断</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">主诉</span></td>
+                <td class="form_td form_td_ctrl" colspan="7">${chiefcomplaint}</td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">现病史</span></td>
+                <td class="form_td form_td_ctrl" colspan="7">${presenthistory}</td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">主诊断</span></td>
+                <td class="form_td form_td_ctrl">${maindiagnosis}</td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">主诊断说明</span></td>
+                <td class="form_td form_td_ctrl" colspan="3">${diagnosisinfo}</td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">次诊断</span></td>
+                <td class="form_td form_td_ctrl">${secondarydiagnosis}</td>
+            </tr>
+            <tr>
+                <td colspan="8" class="form_td">
+                    <fieldset class="allborder"><legend>辅助检查</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                 <td class="form_td form_td_title"><span class="form_td_span_title">血红蛋白</span></td>
+                <td class="form_td form_td_ctrl">${haemoglobin}</td>
+                 <td class="form_td form_td_title"><span class="form_td_span_title">尿蛋白</span></td>
+                <td class="form_td form_td_ctrl">${albuminuria}</td>
+                 <td class="form_td form_td_title"><span class="form_td_span_title">肝功能</span></td>
+                <td class="form_td form_td_ctrl">${liverfunction}</td>
+                 <td class="form_td form_td_title"><span class="form_td_span_title">胎心监护</span></td>
+                <td class="form_td form_td_ctrl">${monitor}</td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">B超</span></td>
+                <td class="form_td" colspan="7">${bultrasonicdiagnosis}</td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">其他检验检查</span></td>
+                <td class="form_td" colspan="7">${othercommonexam}</td>
+            </tr>
+            <tr>
+                <td colspan="8" class="form_td">
+                    <fieldset class="allborder"><legend>随访评估</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">高危等级</span></td>
+                <td class="form_td form_td_ctrl">${highrisklevel}</td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">高危因素</span></td>
+                <td class="form_td form_td_ctrl" colspan="5">${highriskreason}</td>
+            </tr>
+            <tr>                            
+                <td class="form_td form_td_title"><span class="form_td_span_title">其他评估</span></td>
+                <td class="form_td" colspan="7">${generalcomment}</td>
+            </tr>
+            <tr>
+                <td colspan="8" class="form_td">
+                    <fieldset class="allborder"><legend>处理宣教</legend></fieldset>
+                </td>
+            </tr>
+            <tr>                            
+                <td class="form_td form_td_title"><span class="form_td_span_title">处理建议</span></td>
+                <td class="form_td" colspan="7">{{html suggestion}}</td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">健康宣教</span></td>
+                <td class="form_td" colspan="7">{{html guide}}</td>
+            </tr>
+        </table>
+        </div>
+</script>

@@ -1,0 +1,17 @@
+﻿<tr  data-index="${index}" class="tr_pregnanthistory">
+    <td class="form_td form_td_title"><span class="form_td_span_title">孕产状况</span></td>
+    <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_pregstatus" data-index="${index}" data-group="${group}" data-value="${pregstatus}" data-url="../Services/ConfigService/Select-pregstatus.json" data-panelHeight="300" data-multiple="true"></td>
+    
+    <td class="form_td form_td_title"><span class="form_td_span_title">性别</span></td>
+    <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_babysex" data-index="${index}" data-group="${group}" data-value="${babysex}" data-url="../Services/ConfigService/Select-babysex.json"></td>
+    
+    <td class="form_td form_td_title"><span class="form_td_span_title">发生年份</span></td>
+    <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_pregnantage"  data-value="${pregnantage}" data-index="${index}" data-group="${group}"></td>
+    
+    <td class="form_td form_td_title"><span class="form_td_span_title">其他</span></td>
+    <td class="form_td form_td_ctrl td_textbox selfwidth" data-id="tmpl_otherpregnanthistory"  data-group="${group}" data-index="${index}" data-value="${otherpregnanthistory}" data-width="74%" style="position:relative;">
+        <div style="position:absolute;right:0px;top:6px;width:24%;">
+            <a class="plus btnlink" title="增加孕产史" ></a><a class="minus btnlink" title="删除孕产史"></a>
+        </div>
+    </td> 
+</tr>

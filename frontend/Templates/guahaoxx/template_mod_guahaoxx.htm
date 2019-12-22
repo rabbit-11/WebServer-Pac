@@ -1,0 +1,51 @@
+﻿
+    <div style="margin-bottom:10px;position:relative;" class="querywrapper">
+        <input class="easyui-datebox" id="jiuzhenrq" style="width:10%;"/>
+        <input class="easyui-textbox" id="xingming" data-options="prompt:'姓名'" style="width:8%;"/>
+        <input class="easyui-textbox" id="jiuzhenkh" data-options="prompt:'就诊卡号'" style="width:8%;"/>
+        <input class="easyui-textbox" id="bingrenid" data-options="prompt:'健康号'" style="width:8%;"/>
+        <select class="easyui-combobox" id="guahaobc" style="width:6%;">
+            <option value="-1">全部</option>
+            <option value="0">上午</option>
+            <option value="1">下午</option>
+        </select>
+        <input class="easyui-combobox" id="guahaoks" style="width:30%;" />
+        <a class="easyui-linkbutton" id="btn_search">检索</a>
+        <a class="easyui-linkbutton" id="btn_sync" >刷新</a>
+        <span style=" display:inline-block;padding:4px;background-color:#B4EEB4;text-align:center;" >已预诊</span>
+        <span style=" display:inline-block;padding:4px;background-color:#FFE4B5;text-align:center; ">未建小卡</span>
+
+        <div style="position:absolute;right:3px;top:0px;">
+        <span id="wrapper_lururname"></span>
+        <a class="easyui-linkbutton" id="btn_logout" >注销</a>
+        </div>
+    </div>
+    <div>
+        <table id="guahaoxxlist"></table>
+    </div>
+    
+<!--弹窗-->
+<div id="win_prediagnosis" class="mywindow" data-maximize="false" data-width="1040" data-height="600" data-modal="true" data-url="Page_PreDiagnosis.aspx" data-title="预诊信息" data-minimizable="false" data-maximizable="false" data-collapsible="false" data-closable="false" event-callback="callback_predianogsis" event-onBeforeClose="onBeforeClose_prediagnosis"></div>
+<div id="win_emerprediagnosis" class="mywindow" data-maximize="true" data-width="940" data-height="500" data-modal="true" data-url="Page_EmerPreDiagnosis.aspx" data-title="急诊预诊信息" data-minimizable="false" data-maximizable="false" data-collapsible="false" ></div>
+<div id="win_specialeva" class="mywindow" data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="" data-title="特殊人群评估" data-minimizable="false" data-maximizable="false" data-collapsible="false" event-callback="callback_specialeva" data-back=""></div>
+
+<script type="text/javascript" language="javascript">
+   
+    function callback_predianogsis() {
+        require(["page_guahaoxx", "base_usercontrol", "jextend", "common"], function (a, base) {
+            var data_back = base.getattr("#win_prediagnosis", "data-back");
+            if (data_back != null && data_back != undefined && data_back != "") {
+                a.query();
+            }
+        });
+    }
+    function onBeforeClose_prediagnosis(sender,mybase) {
+//        require([ "base_usercontrol", "jextend", "common"], function (a, base) {
+//        LeaveCheckUtil.share_leave($("#win_prediagnosis"), "离开时前是否保存？", alert1, null, null, mybase);
+//        return false;
+//        });
+        }
+//        function alert1() {
+//            alert("保存了");
+//        }
+</script>

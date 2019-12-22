@@ -1,0 +1,179 @@
+﻿<div style="width:96%;margin:10px auto; position:relative;min-height:320px;">
+    <table width="100%" cellpadding="0" cellspacing="0" class="customtable customtable_specialeva">
+        <tr>
+            <td class="form_td form_td_title form_td_widthflag"><span style="display:inline-block;width:140px;"></span></td>
+            <td class="form_td" colspan="7"></td>
+        </tr>
+        
+        <tr>
+            <td colspan="8">
+                <fieldset>
+                    <legend>
+                        <span class="form_td_ctrl td_checkbox" data-id="tmpl_young" data-value="${young}" event-onchanged="groupcheckbox_onChanged" data-cbgroup="dg_young"></span>&nbsp;&nbsp;青春期患者（12~18周岁）
+                    </legend>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title" data-cbgroup="dg_young"><span class="form_td_span_title">学习情况</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_younglearning" data-value="${younglearning}"  data-url="../Services/ConfigService.asmx/Select?q=younglearning"  data-cbgroup="dg_young"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_young"><span class="form_td_span_title">与家庭成员关系</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_youngfamily" data-value="${youngfamily}"  data-url="../Services/ConfigService.asmx/Select?q=youngfamily" data-cbgroup="dg_young"></td>
+
+            <td class="form_td form_td_title"></td>
+            <td class="form_td form_td_ctrl"></td>  
+            <td class="form_td form_td_title"></td>
+            <td class="form_td form_td_ctrl"></td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <fieldset><legend><span class="form_td_ctrl td_checkbox" data-id="tmpl_drug" data-value="${drug}" event-onchanged="groupcheckbox_onChanged" data-cbgroup="dg_drug"></span>&nbsp;&nbsp;吸毒患者</legend></fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title" data-cbgroup="dg_drug"><span class="form_td_span_title">吸毒方式</span></td>
+            <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_drugmethod"  data-value="${drugmethod}" data-cbgroup="dg_drug"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_drug"><span class="form_td_span_title">吸毒频率</span></td>
+            <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_drugfreq"  data-value="${drugfreq}" data-cbgroup="dg_drug"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_drug"><span class="form_td_span_title">吸毒时间</span></td>
+            <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_drugtime"  data-value="${drugtime}" data-cbgroup="dg_drug"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_drug"><span class="form_td_span_title">心理压力</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_drugpsy" data-value="${drugpsy}"  data-url="../Services/ConfigService.asmx/Select?q=drugpsy" data-cbgroup="dg_drug"></td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <fieldset><legend><span class="form_td_ctrl td_checkbox" data-id="tmpl_drink" data-value="${drink}" event-onchanged="groupcheckbox_onChanged" data-cbgroup="dg_drink"></span>&nbsp;&nbsp;酗酒患者</legend></fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title"" data-cbgroup="dg_drink"><span class="form_td_span_title">酗酒原因</span></td>
+            <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_drinkreason"  data-value="${drinkreason}"" data-cbgroup="dg_drink"></td>
+            <td class="form_td form_td_title"" data-cbgroup="dg_drink"><span class="form_td_span_title">酗酒情况</span></td>
+            <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_drinkinfo"  data-value="${drinkinfo}" colspan="5"" data-cbgroup="dg_drink"></td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <fieldset><legend><span class="form_td_ctrl td_checkbox" data-id="tmpl_radio" data-value="${radio}" event-onchanged="groupcheckbox_onChanged" data-cbgroup="dg_radio"></span>&nbsp;&nbsp;化放疗患者</legend></fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title" data-cbgroup="dg_radio"><span class="form_td_span_title">恶心/呕吐</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_radiovomit" data-value="${radiovomit}"  data-url="../Services/ConfigService.asmx/Select?q=radiovomit" data-cbgroup="dg_radio"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_radio"><span class="form_td_span_title">对待治疗的心态</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_radiopsy" data-value="${radiopsy}"  data-url="../Services/ConfigService.asmx/Select?q=radiopsy" data-cbgroup="dg_radio"></td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <fieldset><legend><span class="form_td_ctrl td_checkbox" data-id="tmpl_emotion" data-value="${emotion}"  event-onchanged="groupcheckbox_onChanged" data-cbgroup="dg_emotion"></span>&nbsp;&nbsp;有情感或精神疾患的患者</legend></fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title" data-cbgroup="dg_emotion"><span class="form_td_span_title">自伤/伤人</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_emotionwound" data-value="${emotionwound}"  data-url="../Services/ConfigService.asmx/Select?q=emotionwound" data-cbgroup="dg_emotion"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_emotion"><span class="form_td_span_title">定向力</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_emotionforce" data-value="${emotionforce}"  data-url="../Services/ConfigService.asmx/Select?q=emotionforce" data-cbgroup="dg_emotion"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_emotion"><span class="form_td_span_title">精神科就诊史</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_emotionspirit" data-value="${emotionspirit}"  data-url="../Services/ConfigService.asmx/Select?q=emotionspirit" data-cbgroup="dg_emotion"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_emotion"><span class="form_td_span_title">与家庭成员关系</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_emotionfamily" data-value="${emotionfamily}"  data-url="../Services/ConfigService.asmx/Select?q=emotionfamily" data-cbgroup="dg_emotion"></td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <fieldset><legend><span class="form_td_ctrl td_checkbox" data-id="tmpl_pain" data-value="${pain}"  event-onchanged="groupcheckbox_onChanged" data-cbgroup="dg_pain"></span>&nbsp;&nbsp;既往一月内具有疼痛体验的患者</legend></fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title" data-cbgroup="dg_pain"><span class="form_td_span_title">疼痛在夜间中断睡眠</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_painsleep" data-value="${painsleep}"  data-url="../Services/ConfigService.asmx/Select?q=painsleep" data-cbgroup="dg_pain"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_pain"><span class="form_td_span_title">疼痛中断参加的活动</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_painactivity" data-value="${painactivity}"  data-url="../Services/ConfigService.asmx/Select?q=painactivity" data-cbgroup="dg_pain"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_pain"><span class="form_td_span_title">每天经历疼痛</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_paineveryday" data-value="${paineveryday}"  data-url="../Services/ConfigService.asmx/Select?q=paineveryday" data-cbgroup="dg_pain"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_pain"><span class="form_td_span_title">使用疼痛药物</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_painmedicine" data-value="${painmedicine}"  data-url="../Services/ConfigService.asmx/Select?q=painmedicine" data-cbgroup="dg_pain"></td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <fieldset><legend><span class="form_td_ctrl td_checkbox" data-id="tmpl_batter" data-value="${btater}" event-onchanged="groupcheckbox_onChanged" data-cbgroup="dg_btater"></span>&nbsp;&nbsp;受虐待或忽视的患者</legend></fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title" data-cbgroup="dg_btater"><span class="form_td_span_title">身上不明原因的瘀伤</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_batternoreason" data-value="${batternoreason}"  data-url="../Services/ConfigService.asmx/Select?q=batternoreason" data-cbgroup="dg_btater"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_btater"><span class="form_td_span_title">对家人表现出害怕</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_batterfear" data-value="${batterfear}"  data-url="../Services/ConfigService.asmx/Select?q=batterfear" data-cbgroup="dg_btater"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_btater"><span class="form_td_span_title">对家人表现撤退动作</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_batterretreat" data-value="${batterretreat}"  data-url="../Services/ConfigService.asmx/Select?q=batterretreat" data-cbgroup="dg_btater"></td>
+        </tr>	
+	
+	    <tr>
+            <td colspan="8">
+                <fieldset><legend><span class="form_td_ctrl td_checkbox" data-id="tmpl_immune" data-value="${immune}" event-onchanged="groupcheckbox_onChanged" data-cbgroup="dg_immune"></span>&nbsp;&nbsp;免疫抑制患者</legend></fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title" data-cbgroup="dg_immune"><span class="form_td_span_title">皮肤黏膜情况</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_immunemucosa" data-value="${immunemucosa}"  data-url="../Services/ConfigService.asmx/Select?q=immunemucosa" data-cbgroup="dg_immune"></td>
+        </tr>
+	    <tr>
+            <td colspan="8">
+                <fieldset><legend><span class="form_td_ctrl td_checkbox" data-id="tmpl_deathbed" data-value="${deathbed}" event-onchanged="groupcheckbox_onChanged" data-cbgroup="dg_deathbed"></span>&nbsp;&nbsp;临终患者</legend></fieldset>
+            </td>
+        </tr>
+		<tr>
+            <td colspan="8" data-cbgroup="dg_deathbed"><b>患者评估：</b></td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title" data-cbgroup="dg_deathbed"><span class="form_td_span_title">精神心理</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_deathbedpsy" data-value="${deathbedpsy}"  data-url="../Services/ConfigService.asmx/Select?q=deathbedpsy" data-cbgroup="dg_deathbed"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_deathbed"><span class="form_td_span_title">身体舒适状况</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_deathbedbody" data-value="${deathbedbody}"  data-url="../Services/ConfigService.asmx/Select?q=deathbedbody" data-cbgroup="dg_deathbed"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_deathbed"><span class="form_td_span_title">宗教需求</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_deathbedreligion" data-value="${deathbedreligion}"  data-url="../Services/ConfigService.asmx/Select?q=deathbedreligion" data-cbgroup="dg_deathbed"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_deathbed"><span class="form_td_span_title">心理及治疗需求</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_deathbedpsytreat" data-value="${deathbedpsytreat}"  data-url="../Services/ConfigService.asmx/Select?q=deathbedpsytreat" data-cbgroup="dg_deathbed"></td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title" data-cbgroup="dg_deathbed"><span class="form_td_span_title">与家庭成员关系</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_deathbedfamily" data-value="${deathbedfamily}"  data-url="../Services/ConfigService.asmx/Select?q=deathbedfamily" data-cbgroup="dg_deathbed"></td>
+        </tr>
+		<tr>
+            <td colspan="8" data-cbgroup="dg_deathbed"><b>家属（授权人）评估：</b></td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title" data-cbgroup="dg_deathbed"><span class="form_td_span_title">精神心理</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_deathbedauthpsy" data-value="${deathbedauthpsy}"  data-url="../Services/ConfigService.asmx/Select?q=deathbedauthpsy" data-cbgroup="dg_deathbed"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_deathbed"><span class="form_td_span_title">家属对患者救治态度</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_deathbedauthtreat" data-value="${deathbedauthtreat}"  data-url="../Services/ConfigService.asmx/Select?q=deathbedauthtreat" data-cbgroup="dg_deathbed"></td>
+            <td class="form_td form_td_title" data-cbgroup="dg_deathbed"><span class="form_td_span_title">遗体/器官捐赠意愿</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_deathbedauthorgan" data-value="${deathbedauthorgan}"  data-url="../Services/ConfigService.asmx/Select?q=deathbedauthorgan" data-cbgroup="dg_deathbed"></td>
+        </tr>
+    </table>
+    <div style="margin-top:10px; text-align:center;width:100%;">
+        <a class="easyui-linkbutton l-btn l-btn-small btn_model_save">
+            <span class="l-btn-left">
+                <span class="l-btn-text">保存</span>
+            </span>
+        </a>
+    </div>
+</div>
+<div class="hidden">
+    <input type="text" class="form_td_ctrl td_hidden" value="${id}" data-id="tmpl_id"  data-value="${id}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${idcard}" data-id="tmpl_idcard"  data-value="${idcard}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${patientid}" data-id="tmpl_patientid"  data-value="${patientid}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${personname}" data-id="tmpl_personname"  data-value="${personname}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${doctorid}" data-id="tmpl_doctorid"  data-value="${doctorid}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${doctorname}" data-id="tmpl_doctorname"  data-value="${doctorname}"/>
+</div>
+
+<script type="text/javascript" language="javascript">
+    function groupcheckbox_onChanged(data) {
+        var sender =data. sender;
+        var args = data.args;
+        var group = data.group;
+        if(args)
+            $("td[data-cbgroup='" + group + "']").show();
+        else
+            $("td[data-cbgroup='" + group + "']").hide();
+    }
+</script>

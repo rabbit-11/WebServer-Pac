@@ -1,0 +1,184 @@
+﻿<div class="border_class_deep_top border_class_deep_bottom div_form_wrapper" style="border-left:0px solid black;border-right:0px solid black;">
+    <div id="form_wrapper" style="width:96%;margin:6px auto 6px auto;">
+        <table width="100%" cellpadding="0" cellspacing="0" class="customtable">
+            <tr>
+                <td class="form_td form_td_title form_td_widthflag"><span style="display:inline-block;width:138px;"></span></td>
+                <td class="form_td" colspan="7"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>基本信息</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">联系电话</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_mobilenumber" data-value="${mobilenumber}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">其他联系电话</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_othermobilenumber" data-value="${othermobilenumber}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">民族</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_nationaltype" data-value="${nationaltype}" data-url="../Services/ConfigService.asmx/Select?q=nationaltype" data-panelHeight="300"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">种族</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_race" data-value="${race}" data-url="../Services/ConfigService.asmx/Select?q=race"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>筛查信息</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">收费方式</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_chargingmode" data-value="${chargingmode}" data-url="../Services/ConfigService.asmx/Select?q=chargingmode"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">围产保健编号</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_perinatalnumber" data-value="${perinatalnumber}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">筛查类型</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_planname" data-value="${planname}"  data-url="../Services/ConfigService.asmx/Select?q=planname"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">签署同意书</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_init_screeningchoice" data-value="${init_screeningchoice}"  data-url="../Services/ConfigService.asmx/Select?q=init_screeningchoice"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>孕期详情</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">末次月经</span></td>
+                <td class="form_td form_td_ctrl td_datepicker" data-id="tmpl_lastmenstrualperiod" data-value="${lastmenstrualperiod}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">孕周</span></td>
+                <td><span class=" form_td_ctrl td_numberbox" data-id="tmpl_pregweeks"  style="width:40%;display:inline-block;" data-value="${pregweeks}" data-min="0" data-max="200" class="selfwidth"></span><span style="display:inline-block;width:18%; text-align:center;">+</span><span class=" form_td_ctrl td_numberbox" data-id="tmpl_pregdays"  style="width:40%;display:inline-block;" data-value="${pregdays}" data-min="0" data-max="200" class="selfwidth"></span></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">月经周期</span></td>
+                <td><span class=" form_td_ctrl td_numberbox" data-id="tmpl_cyclemin"  style="width:40%;display:inline-block;" data-value="${cyclemin}" data-min="0" data-max="200" class="selfwidth"></span><span style="display:inline-block;width:18%; text-align:center;">+</span><span class=" form_td_ctrl td_numberbox" data-id="tmpl_cyclemax"  style="width:40%;display:inline-block;" data-value="${cyclemax}" data-min="0" data-max="200" class="selfwidth"></span></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">月经规律</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_menstruation" data-value="${menstruation}"  data-url="../Services/ConfigService.asmx/Select?q=menstruation"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">妊娠情况</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_pregnancy" data-value="${pregnancy}" data-url="../Services/ConfigService.asmx/Select?q=pregnancy"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">胎儿个数</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_fetusesnumber" data-value="${fetusesnumber}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">胎次</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_gravidity" data-value="${gravidity}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">产次</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_parity" data-value="${parity}"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">其他情况</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_otherpregnancy" data-value="${otherpregnancy}" colspan="7"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>既往史</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">是否吸烟</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_smoking" data-value="${smoking}" data-url="../Services/ConfigService.asmx/Select?q=smoking"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">胰岛素依赖性糖尿病</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_type1diabetes" data-value="${type1diabetes}" data-url="../Services/ConfigService.asmx/Select?q=type1diabetes"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">是否高血压</span></td>                
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_hip" data-value="${hip}" data-url="../Services/ConfigService.asmx/Select?q=hip"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">遗传病</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_geneticdiseases" data-value="${geneticdiseases}" colspan="7"></td>                
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">异常妊娠史</span></td>                
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_abnormalpregnancyhistory" data-value="${abnormalpregnancyhistory}" data-url="../Services/ConfigService.asmx/Select?q=abnormalpregnancyhistory" data-multiple="true" data-allowtext="true" data-panelHeight="200"></td>
+
+                <td class="form_td form_td_title"><span class="form_td_span_title">其他妊娠史</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_otherpregnancy" data-value="${otherpregnancy}" colspan="5"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>试管婴儿</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">是否试管婴儿</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_test_tube_baby" data-value="${test_tube_baby}" data-url="../Services/ConfigService.asmx/Select?q=test_tube_baby"></td>                
+                <td class="form_td form_td_title"><span class="form_td_span_title">取卵日期</span></td>
+                <td class="form_td form_td_ctrl td_datepicker" data-id="tmpl_cell_date" data-value="${cell_date}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">植入日期</span></td>
+                <td class="form_td form_td_ctrl td_datepicker" data-id="tmpl_plan_date" data-value="${plan_date}"></td>
+            </tr>            
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>血清采样</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">采血医院</span></td>
+                <td class="form_td form_td_ctrl td_dropdowntree" colspan="3" data-id="tmpl_bloodhospital" data-value="${bloodhospital}" data-url="../Services/ConfigService.asmx/DropDownTree?q=bloodhospital"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">采血日期</span></td>
+                <td class="form_td form_td_ctrl td_datepicker" data-id="tmpl_blooddate" data-value="${blooddate}"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">标本编号</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_specimennumber" data-value="${specimennumber}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">标本存放位置</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_specimenstorage" data-value="${specimenstorage}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">标本存放日期</span></td>
+                <td class="form_td form_td_ctrl td_datepicker" data-id="tmpl_specimenstoragedate" data-value="${specimenstoragedate}"></td>
+            </tr>           
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>B超检查</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">CRL(cm)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_crl" data-value="${crl}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">CRL B超时间</span></td>
+                <td class="form_td form_td_ctrl td_datepicker" data-id="tmpl_crldate" data-value="${crldate}"></td>            
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">NT(mm)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_nt" data-value="${nt}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">NT B超时间</span></td>
+                <td class="form_td form_td_ctrl td_datepicker" data-id="tmpl_ntdate" data-value="${ntdate}"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">BPD(cm)</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_bpd" data-value="${bpd}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">BPD B超时间</span></td>
+                <td class="form_td form_td_ctrl td_datepicker" data-id="tmpl_bpddate" data-value="${bpddate}"></td>
+            </tr>
+            <tr>
+                <td  colspan="6" style="vertical-align:middle;  text-align:right;">检查医生：</td>
+                <td class="form_td form_td_ctrl td_label" data-id="tmpl_lb_visitdoctorname" data-value="${visitdoctorname}" style=" vertical-align: middle;text-align:left;"></td>
+                <td class="form_td" style="vertical-align:middle;  text-align:right;">
+                    <a class="btn btn_detail_save"   style="padding-left:14px;padding-right:14px; padding-top:3px;padding-bottom:3px; font-size:14px;">保存</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>   
+    
+<div class="hidden">
+    <input type="text" class="form_td_ctrl td_hidden" value="${id}" data-id="tmpl_id" data-value="${id}" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${idcard}" data-id="tmpl_idcard" data-value="${idcard}" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${patientid}" data-id="tmpl_patientid" data-value="${patientid}" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${personname}" data-id="tmpl_personname" data-value="${personname}" />
+
+    <input type="text" class="form_td_ctrl td_hidden" value="${jiuzhenid}" data-id="tmpl_jiuzhenid" data-value="${jiuzhenid}" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${departmentcode}" data-id="tmpl_departmentcode" data-value="${departmentcode}" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${departmentname}" data-id="tmpl_departmentname" data-value="${departmentname}" />
+    
+    <input type="text" class="form_td_ctrl td_hidden" value="${visitdoctorcode}" data-id="tmpl_visitdoctorcode" data-value="${visitdoctorcode}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${visitdoctorname}" data-id="tmpl_visitdoctorname" data-value="${visitdoctorname}"  />     
+
+    <input type="text" class="form_td_ctrl td_hidden" value="${visitunitcode}" data-id="tmpl_visitunitcode" data-value="${visitunitcode}"  />  
+
+    <input type="text" class="form_td_ctrl td_hidden" value="${idtype}" data-id="tmpl_idtype" data-value="${idtype}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${permanentaddrcode}" data-id="tmpl_permanentaddrcode" data-value="${permanentaddrcode}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${permanentaddrname}" data-id="tmpl_permanentaddrname" data-value="${permanentaddrname}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${permanentaddrtext}" data-id="tmpl_permanentaddrtext" data-value="${permanentaddrtext}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${liveaddrcode}" data-id="tmpl_liveaddrcode" data-value="${liveaddrcode}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${liveaddrname}" data-id="tmpl_liveaddrname" data-value="${liveaddrname}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${liveaddrtext}" data-id="tmpl_liveaddrtext" data-value="${liveaddrtext}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${birthday}" data-id="tmpl_birthday" data-value="${birthday}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${age}" data-id="tmpl_age" data-value="${age}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${preg_eddage}" data-id="tmpl_preg_eddage" data-value="${preg_eddage}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${gravidity}" data-id="tmpl_gravidity" data-value="${gravidity}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${parity}" data-id="tmpl_parity" data-value="${parity}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${preg_realcycle}" data-id="tmpl_preg_realcycle" data-value="${preg_realcycle}"  />  
+
+</div>

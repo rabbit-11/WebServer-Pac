@@ -1,0 +1,38 @@
+﻿
+<table cellpadding="0" cellspacing="0" width="100%" style=" text-align:center; border:1px solid #ededed;" cellpadding="0" cellspacing="0" >
+    <thead>
+        <tr class="tr_odd">
+            <th style="width:23%">胎心</th>
+            <th style="width:23%">胎位</th>
+            <th style="width:23%">先露</th>
+            <th style="width:23%">胎动</th>
+            <th style="width:8%">操作</th>
+        </tr>
+    </thead>
+    <tbody id="list_multifetal_tbody_wrapper">
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="5" style="padding-top:10px;padding-bottom:10px; text-align:center;">
+                <a class="easyui-linkbutton l-btn l-btn-small" id="fetal_save">
+                    <span class="l-btn-left">
+                        <span class="l-btn-text">保存</span>
+                    </span>
+                </a>
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<script type="text/javascript"  language="javascript">
+    require(["list_multifetal"], function (a) {
+        a.show();
+    });
+    function position_changed(args) {
+        if (args == null || args == undefined)
+            return;
+        var sender = args.sender;
+        require(["share_services"], function (share) {
+            share.position_changed(sender);
+        });
+    }
+</script>

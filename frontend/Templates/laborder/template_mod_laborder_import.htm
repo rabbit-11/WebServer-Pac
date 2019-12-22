@@ -1,0 +1,25 @@
+﻿<div id="win_importlaborder_wrapper">
+    <div class="querywrapper" style="position:relative;">
+       <input class="easyui-datebox" id="laborder_reportdate_s" data-options="prompt:'起始 报告时间'" style="width:10%;" />-<input class="easyui-datebox" id="laborder_reportdate_e" " data-options="prompt:'结束 报告时间'"style="width:10%;" />
+        <a class="easyui-linkbutton" id="btn_importlaborder_search"  style="height:23px;width:60px;">检索</a>
+        <a class="easyui-linkbutton" id="btn_importlaborder_sync"  style="height:23px;width:60px;">同步</a>
+        <div style="position:absolute;right:0px;top:0px;">
+            <a class="easyui-linkbutton" id="btn_importlaborder_save"  style="height:23px;width:60px;">保存</a>
+        </div>
+    </div>
+    <div class="clearfix" style="margin-top:10px;">
+        <div style="width:30%;float:left;">
+            <table id="import_laborderlist" style="width:100%;"></table>
+        </div>
+        <div style="width:69%;margin-left:31%;">
+            <table id="import_labresultlist"></table>
+            <div id="selected_laborder_wrapper" style="position:relative;">
+                <div id="selected_laborder" style="width:96%;">
+                </div>
+                <div style="position:absolute;right:0px;top:0px;">
+                    <a id="dl_laborder_remove" class="easyui-linkbutton img_wrapper" ><img src="../Images/delete.png" alt=""   /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

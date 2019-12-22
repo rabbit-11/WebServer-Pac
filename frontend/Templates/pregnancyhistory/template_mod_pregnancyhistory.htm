@@ -1,0 +1,66 @@
+﻿ <div class="back_class_deep back_class_common">
+    <a class="btnlink" id="btn_save_pregnancyhistory"><img src="../Images/queding.png" alt=""/>保存</a>
+</div>
+<div class="div_form_wrapper border_wrapper">
+    <div id="form_wrapper_pregnancyhistory" style="width:96%;margin:6px auto 6px auto;">
+        <table width="100%" cellpadding="0" cellspacing="0" class="customtable customtable_pregnancyhistory">
+            <tr>
+                <td class="form_td form_td_title form_td_widthflag"><span style="display:inline-block;width:100px;"></span></td>
+                <td class="form_td form_td_ctrl" colspan="7"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>妊娠情况</legend></fieldset>
+                </td>
+            </tr>
+            <tr>	
+                <td class="form_td form_td_title"><span class="form_td_span_title">孕次</span></td>
+                <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_gravidity" data-value="${gravidity}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">生产日期</span></td>
+                <td class="form_td form_td_ctrl td_datepicker" data-id="tmpl_pregdeliverydate" data-value="${pregdeliverydate}" data-required="true"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">妊娠结局</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_outcomeofpregnant" data-value="${outcomeofpregnant}" data-url="../Services/ConfigService.asmx/Select?q=outcomeofpregnant"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">是否足月儿</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_isfullmonth" data-value="${isfullmonth}" data-url="../Services/ConfigService.asmx/Select?q=isfullmonth"></td>
+                
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">流产方式</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_abortion" data-value="${abortion}" data-url="../Services/ConfigService.asmx/Select?q=abortion"></td>	        
+            </tr>
+            <tr>   
+                <td class="form_td form_td_title"><span class="form_td_span_title">其他异常妊娠史</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_abnormalhistory" data-value="${abnormalhistory}" colspan="7" data-rows="3" data-height="80"></td> 
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>新生儿情况</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">新生儿存活</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_mhc_babysurvive" data-value="${mhc_babysurvive}" data-url="../Services/ConfigService.asmx/Select?q=mhc_babysurvive"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">分娩方式</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_mhc_deliverymode" data-value="${mhc_deliverymode}" data-url="../Services/ConfigService.asmx/Select?q=mhc_deliverymode"></td>	
+                <td class="form_td form_td_title"><span class="form_td_span_title">胎婴儿情况</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_outcomeofbirth" data-value="${outcomeofbirth}" data-url="../Services/ConfigService.asmx/Select?q=outcomeofbirth"></td>		     
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">其他孕产史</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_otherhistory" data-value="${otherhistory}" colspan="7"  data-rows="3" data-height="80"></td>           
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<div class="hidden">
+    <input type="text" class="form_td_ctrl td_hidden" value="${id}" data-id="tmpl_id" data-value="${id}" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${pregnantinfoid}" data-id="tmpl_pregnantinfoid" data-value="${pregnantinfoid}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${idcard}" data-id="tmpl_idcard" data-value="${idcard}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${patientid}" data-id="tmpl_patientid" data-value="${patientid}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${editorcode}" data-id="tmpl_editorcode" data-value="${editorcode}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${editorname}" data-id="tmpl_editorname" data-value="${editorname}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${serviceunitcode}" data-id="tmpl_serviceunitcode" data-value="${serviceunitcode}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${serviceunitname}" data-id="tmpl_serviceunitname" data-value="${serviceunitname}"  />
+</div>

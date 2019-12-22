@@ -1,0 +1,101 @@
+﻿<div class="back_class_deep" style="height:30px;line-height:30px;width:100%;color:White; position:relative;">
+    
+    <div style="margin-left:9px; ">
+        <a class="btnlink" id="btn_edit" style=" text-decoration:none;"><img src="../Images/btn_edit.png" alt=""/>详情模式</a>
+    </div>
+    <div style="position:absolute;right:8px;top:0px;font-size:16px;">
+        <a class="btnlink nosave" id="btn_print"><img src="../Images/dayin.png" alt=""/>打印</a>
+    </div>
+
+</div>
+
+<table cellpadding="0" cellspacing="0" width="100%" id="pregnantinfo_summary_table">
+    <tr>
+        <td class="title" style="width:12%">姓名</td>
+        <td style="width:13%">${personname}</td>
+        <td class="title" style="width:12%">身份证号</td>
+        <td style="width:13%">${idcard}</td>
+        <td class="title" style="width:12%">手机号码</td>
+        <td style="width:13%">${mobilenumber}</td>
+        <td class="title" style="width:12%">就诊卡号</td>
+        <td style="width:13%">${patientaccount}</td>
+    </tr>    
+    <tr>    
+        <td class="title">职业</td>
+        <td>${workname}</td>
+        <td class="title">居住地址</td>
+        <td colspan="5">${liveaddresstext}${liveplace_text}</td>
+    </tr>
+    <tr>
+        <td class="title">血压(mmHg)</td>
+        <td>${sbp}/${dbp}</td>
+        <td class="title">脉搏(cpm)</td>
+        <td>${pulse}</td>
+        <td class="title">怀孕方式</td>
+        <td colspan="3">${tpregnancymanner}</td>
+    </tr>
+    <tr>
+        <td class="title">孕次产次</td>
+        <td>G${gravidity}P${parity}</td>
+        <td class="title">末次月经</td>
+        <td>${lastmenstrualperiod}</td>
+        <td class="title">预产期</td>
+        <td>${dateofprenatal}</td>
+        <td class="title">当前孕周</td>
+        <td>${currentweek}+${currentday}</td>
+    </tr> 
+    <tr>
+        <td class="title">基础体重(kg)</td>
+        <td>${weight}</td>
+        <td class="title">身高(cm)</td>
+        <td>${height}</td>
+        <td class="title">体质指数</td>
+        <td>${bmi}</td>
+        <td class="title">初潮年龄</td>
+        <td>${menarcheage}</td>
+    </tr> 
+    <tr>
+        <td class="title">经期</td>
+        <td>${menstrualperiodmin}-${menstrualperiodmax}</td>
+        <td class="title">周期</td>
+        <td>${cyclemin}-${cyclemax}</td>
+        <td class="title">月经量</td>
+        <td>${menstrualblood}</td>
+        <td class="title">痛经</td>
+        <td>${dysmenorrhea}</td>
+    </tr> 
+    <tr>
+        <td class="title">妊娠并发症史</td>
+        <td colspan="3">${gestationneuropathy}</td>
+        <td class="title">既往病史</td>
+        <td colspan="3">${pasthistory}</td>
+    </tr>     
+    <tr>
+        <td class="title">家族史</td>
+        <td colspan="3">${familyhistory}</td>
+        <td class="title">手术史</td>
+        <td colspan="3">${operationhistory}</td>
+    </tr>     
+    <tr>
+        <td class="title">妇科手术史</td>
+        <td colspan="3">${gynecologyops}</td>
+        <td class="title">过敏史</td>
+        <td colspan="3">${allergichistory}</td>
+    </tr> 
+    <tr>
+        <td class="title">毒物接触史</td>
+        <td colspan="3">${poisontouchhis}</td>
+        <td class="title">遗传家族史</td>
+        <td colspan="3">${heredityfamilyhistory}</td>
+    </tr> 
+    <tr id="form_tr_wrapper_pregnanthistory">
+        <td colspan="8" class="title">
+            孕产史
+        </td>
+    </tr>
+</table>
+
+
+<div class="hidden">
+    <input type="text" class="form_td_ctrl td_hidden" value="${id}" data-id="tmpl_id" />
+</div>

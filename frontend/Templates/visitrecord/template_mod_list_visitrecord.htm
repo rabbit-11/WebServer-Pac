@@ -1,0 +1,111 @@
+﻿<div class="back_class_deep" style="height:30px; line-height:30px;width:100%;color:White; position:relative;">
+    <span style=" display:inline-block; width:55%;margin-left:5px;">
+        <a class="btnlink" id="btn_laborder"><img src="../Images/icon9.png" alt=""/>检验</a>
+        <a class="btnlink" id="btn_examorder"><img src="../Images/icon9.png" alt=""/>检查</a>
+        <a class="btnlink" id="btn_chufang"><img src="../Images/icon9.png" alt=""/>处方</a>
+        <a class="btnlink" id="btn_bscan"><img src="../Images/icon10.png" alt=""/>胎儿生长</a>
+        <a class="btnlink" id="btn_highriskreport"><img src="../Images/icon10.png" alt=""/>危重报告</a>
+        <a class="btnlink" id="btn_deletevr"><img src="../Images/icon12.png" alt=""/>删除</a>
+        <a class="btnlink" id="btn_add"><img src="../Images/add.png" alt=""/>新增</a>
+        <!--<a class="btnlink"><img src="../Images/icon11.png" alt=""/>危重报卡</a>
+        <a class="btnlink"><img src="../Images/icon12.png" alt=""/>传染病报卡</a>-->
+        <a class="btnlink" id="btn_refresh"><img src="../Images/refresh.png" alt="刷新" title="刷新"/>刷新</a>
+    </span>
+    <span style=" display:inline-block; position:absolute;right:14px;width:43%;top:2px; text-align:right; font-size:15px;">
+        <a class="btnlink" id="btn_highrisk"><img src="../Images/icon10.png" alt=""/>高危评估</a>
+        <a class="btnlink" id="btn_multifetal"><img src="../Images/multifetal.png" alt=""/>多胎</a>
+        <a class="btnlink" id="btn_print"><img src="../Images/dayin.png" alt=""/>打印</a>
+        <a class="btnlink" id="btn_save_top"><img src="../Images/queding.png" alt=""/>保存</a>
+        <a class="btnlink nosave" id="btn_diff" style=" text-decoration:none;" target="_blank"><img src="../Images/icon11.png" alt="" />痕迹</a>
+    </span>
+</div>
+
+<div style="margin-top:10px;">
+    <table cellpadding="0" cellspacing="0" width="100%" style=" text-align:center; border:1px solid #e2e2e2;" >
+        <thead>
+            <tr class="tr_odd" style="height:28px;">
+                <th style="width:12%">日期</th>
+                <th style="width:10%">血压</th>
+                <th style="width:6%">体重</th>
+                <th style="width:6%">宫高</th>
+                <th style="width:6%">腹围</th>
+                <th style="width:6%">脉搏</th>
+                <th style="width:8%">浮肿</th>
+                <th style="width:10%">衔接</th>
+                <th style="width:6%">胎心</th>
+                <th style="width:10%">胎位</th>
+                <th style="width:10%">先露</th>
+                <th style="width:10%">胎动</th>
+            </tr>
+        </thead>
+        <tbody id="list_visitrecord_tbody_wrapper">
+            <tr>
+                <td colspan="12"></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr style="border:1px solid #e2e2e2;"><td colspan="12"></td></tr>
+        </tfoot>
+    </table>
+</div>
+
+<!--弹窗-->
+<div id="win_multifetal" class="mywindow" data-maximize="false" data-width="700" data-height="400" data-modal="true" data-url="Page_Fetal.aspx" data-title="多胎管理" data-minimizable="false" data-maximizable="false" data-collapsible="false" event-callback="callback_multifetal" data-back=""></div>
+<div id="win_chufang" class="mywindow"  data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="Page_ChuFang.aspx" data-title="处方信息" data-minimizable="false" data-maximizable="false" data-collapsible="false"></div>
+<div id="win_examorder" class="mywindow"  data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="Page_ExamOrder.aspx" data-title="检查信息" data-minimizable="false" data-maximizable="false" data-collapsible="false"></div>
+<div id="win_laborder" class="mywindow"  data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="Page_LabOrder.aspx" data-title="检验信息" data-minimizable="false" data-maximizable="false" data-collapsible="false"></div>
+<div id="win_highrisk" class="mywindow" data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="Page_HighRisk.aspx" data-title="高危评估" data-minimizable="false" data-maximizable="false" data-collapsible="false" event-callback="callback_highrisk" data-back=""></div>
+<div id="win_diagnosis"class="mywindow"  data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="Page_Diagnosis.aspx" data-title="诊断信息" data-minimizable="false" data-maximizable="false" data-collapsible="false" event-callback="callback_diagnosis" data-back=""></div>
+<div id="win_laborder_import"class="mywindow"  data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="Page_LabOrder_Import.aspx" data-title="检验导入" data-minimizable="false" data-maximizable="false" data-collapsible="false" event-callback="callback_laborder_import" data-back=""></div>
+<div id="win_examorder_import"class="mywindow"  data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="Page_ExamOrder_Import.aspx" data-title="检查导入" data-minimizable="false" data-maximizable="false" data-collapsible="false" event-callback="callback_examorder_import" data-back=""></div>
+<div id="win_bscan"class="mywindow"  data-maximize="true" data-width="700" data-height="400" data-modal="true" data-url="Page_BScanMeasurement.aspx" data-title="胎儿生长发育" data-minimizable="false" data-maximizable="false"  data-collapsible="false"></div>
+
+<div id="win_highriskreport"class="mywindow"  data-maximize="false" data-width="700" data-height="600" data-modal="true" data-url="Page_Union.aspx" data-title="危重孕产妇报告单" data-minimizable="false" data-maximizable="false"  data-collapsible="false" data-transto=""></div>
+<div id="win_highriskreporthistory"class="mywindow"  data-maximize="true" data-width="700" data-height="600" data-modal="true" data-url="Page_Union.aspx" data-title="危重孕产妇报告记录" data-minimizable="false" data-maximizable="false"  data-collapsible="false" data-transto=""></div>
+
+<script type="text/javascript" language="javascript">
+    function callback_multifetal() {
+        require(["list_visitrecord", "base_usercontrol", "jextend"], function (list_visitrecord, base) {
+            var data_back = base.getattr("#win_multifetal", "data-back");
+            if (data_back != null && data_back != undefined && data_back != "") {
+                var data = JSON.parse(data_back);
+                list_visitrecord.setMultifetal(data);
+            }
+        });
+    }
+    function callback_diagnosis() {
+        require(["list_visitrecord", "base_usercontrol", "jextend"], function (list_visitrecord, base) {
+            var data_back = base.getattr("#win_diagnosis", "data-back");
+            if (data_back != null && data_back != undefined && data_back != "") {
+                var data = JSON.parse(data_back);
+                list_visitrecord.setDiagnosis(data);
+            }
+        }); 
+    }
+    function callback_highrisk() {
+        require(["list_visitrecord", "base_usercontrol", "jextend"], function (list_visitrecord, base) {
+            var data_back = base.getattr("#win_highrisk", "data-back");
+            if (data_back != null && data_back != undefined && data_back != "") {
+                var data = JSON.parse(data_back);
+                list_visitrecord.setHighRisk(data, function () { list_visitrecord.save_CurOpenedRow(null, null);});
+            }
+        });
+    } 
+    function callback_laborder_import() {
+        require(["list_visitrecord", "base_usercontrol", "jextend"], function (list_visitrecord, base) {
+            var data_back = base.getattr("#win_laborder_import", "data-back");
+            if (data_back != null && data_back != undefined && data_back != "") {
+                list_visitrecord.setLabOrder(data_back);
+            } 
+        });
+    }
+    function callback_examorder_import() {
+        require(["list_visitrecord", "base_usercontrol", "jextend"], function (list_visitrecord, base) {
+            var data_back = base.getattr("#win_examorder_import", "data-back");
+            if (data_back != null && data_back != undefined && data_back != "") {
+                list_visitrecord.setExamOrder(data_back);
+            }
+        });
+    }
+    
+</script>

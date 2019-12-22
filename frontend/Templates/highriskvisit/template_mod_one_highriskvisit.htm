@@ -1,0 +1,45 @@
+﻿<div style="width:96%;margin:10px auto; position:relative;min-height:320px;">
+    <table width="100%" cellpadding="0" cellspacing="0" class="customtable">
+        <tr>
+            <td class="form_td form_td_title form_td_widthflag"><span style="display:inline-block;width:78px;"></span></td>
+            <td class="form_td" colspan="5"></td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title"><span class="form_td_span_title">患者姓名</span></td>
+            <td class="form_td form_td_ctrl td_label" data-id="tmpl_personname"  data-value="${personname}"></td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title"><span class="form_td_span_title">通知形式</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_chasenotice" data-value="${chasenotice}"  data-url="../Services/ConfigService.asmx/Select?q=chasenotice"></td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title"><span class="form_td_span_title">随访结果</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_chaseresult" data-value="${chaseresult}"  data-url="../Services/ConfigService.asmx/Select?q=chaseresult"></td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title"><span class="form_td_span_title">诊间预约</span></td>
+            <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_isappointment" data-value="${isappointment}"  data-url="../Services/ConfigService.asmx/Select?q=isappointment"></td>
+        </tr>
+        <tr>
+            <td class="form_td form_td_title"><span class="form_td_span_title">追访备注</span></td>
+            <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_remark" colspan="5" data-rows="8" data-height="100" data-value="${remark}" ></td>
+        </tr>
+    </table>
+    <div style="position:absolute;bottom:10px; text-align:center;width:100%;">
+        <a class="easyui-linkbutton l-btn l-btn-small btn_model_save">
+            <span class="l-btn-left">
+                <span class="l-btn-text">保存</span>
+            </span>
+        </a>
+    </div>
+</div>
+<div class="hidden">
+    <input type="text" class="form_td_ctrl td_hidden" value="${id}" data-id="tmpl_id"  data-value="${id}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${attached_infoid}" data-id="tmpl_attached_infoid"  data-value="${attached_infoid}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${attached_visitid}" data-id="tmpl_attached_visitid"  data-value="${attached_visitid}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${attached_type}" data-id="tmpl_attached_type"  data-value="${attached_type}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${jigoudm}" data-id="tmpl_jigoudm"  data-value="${jigoudm}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${chasedoctorcode}" data-id="tmpl_chasedoctorcode"  data-value="${chasedoctorcode}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${chasedoctorname}" data-id="tmpl_chasedoctorname"  data-value="${chasedoctorname}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${chasedate}" data-id="tmpl_chasedate"  data-value="${chasedate}"/>
+</div>

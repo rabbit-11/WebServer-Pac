@@ -1,0 +1,47 @@
+﻿<style type="text/css">
+    p,.easyui-linkbutton {padding:5px;}
+    .container {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        font-size: 0;
+        white-space: nowrap;
+        overflow: auto;
+    }
+
+    .container:after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+
+    .dialog {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        font-size: 14px;
+        white-space: normal;
+         width:350px;
+         height:400px;
+    } 
+    </style>
+<div class="container">
+      <div class="dialog">
+            <div  class="easyui-panel" data-options="{title:'机构选择'}">
+                <div>
+                    <p><input class="easyui-textbox" id="tb_jigoudm" data-options="prompt:'机构名称'" style="width:90%;"/></p>
+                    
+                    <p style=" text-align:center;">
+                        <a class="easyui-linkbutton" id="btn_login"  style="height:23px;width:60px;">继续</a>
+                    </p>
+                    <p>
+                        <span id="lb_error" style=" color:Red;"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>

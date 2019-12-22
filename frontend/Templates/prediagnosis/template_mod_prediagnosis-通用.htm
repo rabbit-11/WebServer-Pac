@@ -1,0 +1,139 @@
+﻿<div style="position: relative;min-height:400px;" class="prediagnosis_wrapper">
+    <div id="baseinfo_wrapper"></div>
+    <fieldset>
+        <legend>预诊信息</legend>
+        <div id="input_wrapper"></div>
+    </fieldset>
+    <div style="position:absolute;bottom:10px; text-align:center;width:100%;">
+        <a class="easyui-linkbutton l-btn l-btn-small" id="btn_prediagnosis_save">
+            <span class="l-btn-left">
+                <span class="l-btn-text">保存</span>
+            </span>
+        </a>
+        <a class="easyui-linkbutton l-btn l-btn-small" id="btn_prediagnosis_close">
+            <span class="l-btn-left">
+                <span class="l-btn-text">关闭</span>
+            </span>
+        </a>
+        <span style="width:50px;display:inline-block;"></span>
+         <a class="easyui-linkbutton l-btn l-btn-small" id="btn_prediagnosis_print">
+            <span class="l-btn-left">
+                <span class="l-btn-text">建大卡打印</span>
+            </span>
+        </a>
+        <a class="easyui-linkbutton l-btn l-btn-small" id="link_detailinfo" target="_blank">
+            <span class="l-btn-left">
+                <span class="l-btn-text">查看详情</span>
+            </span>
+        </a>
+    </div>
+</div>
+<script id="baseinfo_template" type="text/x-template">
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td style="width:8%"><b>姓　名：</b></td>
+        <td style="width:12%"><div>${xingming}</div></td>
+        <td style="width:8%"><b>五色高危：</b></td>
+        <td style="width:12%">
+            <div><span class="highriskcolor_wrapper"></span></div>
+        </td>
+        <td style="width:20%;text-align:center;"><span style="padding:4px;display:inline-block;color:black;border:1px solid white;" class="preg_wrapper" ></span></td>
+        <td style="width:8%"><b>年龄：</b></td>
+        <td style="width:12%"><div>${age}</div></td>
+        <td style="width:8%"><b>现病史：</b></td>
+        <td style="width:12%"><div>${presenthistory}</div></td>
+    </tr>
+    <tr>
+        <td><b>健康号：</b></td>
+        <td><div>${bingrenid}</div></td>
+        <td><b>就诊卡号：</b></td>
+        <td><div>${jiuzhenkh}</div></td>
+        <td style="text-align:center;"><span style="padding:4px;display:inline-block;color:black;border:1px solid white;" class="pred_wrapper"></span></td>
+        <td><b>科室：</b></td>
+        <td><div>${keshimc}</div></td>
+        <td><b>序　号：</b></td>
+        <td><div>${guahaoxh}</div></td>
+    </tr>
+</table>
+</script>
+
+<script  id="input_template" type="text/x-template">
+<table cellpadding="0" cellspacing="0" class="customtable">
+    <tr>
+        <td class="form_td form_td_title form_td_widthflag"><span class="form_td_span_title" style="display:inline-block;width:90px;"></span></td>
+        <td class="form_td form_td_ctrl" colspan="7"></td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">身份证号</span></td>
+        <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_idcard" data-value="${idcard}"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">预约时间</span></td>
+        <td class="form_td form_td_ctrl td_datepicker" data-id="tmpl_followupappointment" data-value="${followupappointment}"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">衔接</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_xianjie" data-value="${xianjie}"  data-url="../Services/ConfigService.asmx/Select?q=xianjie"></td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">宫高</span></td>
+        <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_heightfundusuterus"  data-value="${heightfundusuterus}" data-min="0" data-max="200"></td>
+    
+        <td class="form_td form_td_title"><span class="form_td_span_title">腹围</span></td>
+        <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_abdomencircumference"  data-value="${abdomencircumference}" data-min="0" data-max="200"></td>
+    
+        <td class="form_td form_td_title"><span class="form_td_span_title">浮肿</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_edemastatus" data-value="${edemastatus}"  data-url="../Services/ConfigService.asmx/Select?q=edemastatus"></td>
+    
+        <td class="form_td form_td_title"><span class="form_td_span_title">体温</span></td>
+        <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_temperature"  data-value="${temperature}"  data-min="0" data-max="50"></td>
+    </tr>
+    
+    <tr id="form_tr_wrapper_multifetal_prediagnosis"></tr>
+
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">身高(cm)</span></td>
+        <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_height" data-value="${height}" data-min="0" data-max="300"></td>
+    
+        <td class="form_td form_td_title"><span class="form_td_span_title">体重(kg)</span></td>
+        <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_weight"  data-value="${weight}" data-min="0" data-max="200"></td>
+    
+        <td class="form_td form_td_title"><span class="form_td_span_title">脉搏(cpm)</span></td>
+        <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_heartrate"  data-value="${heartrate}" data-min="0" data-max="500"></td>
+    
+        <td class="form_td form_td_title"><span class="form_td_span_title">血压</span></td>
+        <td><span class="form_td form_td_ctrl td_numberbox selfwidth" data-id="tmpl_sbp"  style="width:37%;display:inline-block;" data-value="${sbp}" data-min="0" data-max="200"></span><span style="display:inline-block;width:15%; text-align:center;">/</span><span class="form_td form_td_ctrl td_numberbox selfwidth" data-id="tmpl_dbp"  style="width:37%;display:inline-block;" data-value="${dbp}" data-min="0" data-max="200"></span></td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">特殊情况</span></td>
+        <td class="form_td form_td_ctrl td_textbox selfwidth" data-id="tmpl_remark"  data-value="${remark}" colspan="7" data-rows="3" data-height="80" data-width="102.5%"></td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title"></span></td>
+        <td id="form_td_remark_wrapper" style="width:550px; word-break:normal;" colspan="7" data-type="101" data-stage="1"></td>
+    </tr>
+</table>
+<div class="hidden">
+    <input type="text" class="form_td_ctrl td_hidden" value="${id}" data-id="tmpl_id" data-value="${id}" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${editorcode}" data-id="tmpl_editorcode"  data-value="${editorcode}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${editorname}" data-id="tmpl_editorname"  data-value="${editorname}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${jiuzhenid}" data-id="tmpl_jiuzhenid"  data-value="${jiuzhenid}"/>
+    <input type="text" class="form_td_ctrl td_hidden" value="${patientid}" data-id="tmpl_patientid"  data-value="${patientid}"/>
+    
+    <input type="text" class=" td_hidden" value="${kcalid}" data-id="tmpl_kcalid" />
+    <input type="text" class=" td_hidden" value="${builtkcal_number}" data-id="tmpl_builtkcal_number"/>
+    <input type="text" class=" td_hidden" value="${builtkcal_filenumber}" data-id="tmpl_builtkcal_filenumber" />
+    <input type="text" class=" td_hidden" value="${pregnantinfoid}" data-id="tmpl_pregnantinfoid" />
+</div>
+</script>
+
+<script id="color_template" type="text/x-template">
+<span class="shapebase ${color}">${color_text}</span>
+</script>
+
+<script type="text/javascript" language="javascript">
+    function position_changed(args) {
+        if (args == null || args == undefined)
+            return;
+        var sender = args.sender;
+        require(["share_services"], function (share) {
+            share.position_changed(sender);
+        });
+    }
+</script>

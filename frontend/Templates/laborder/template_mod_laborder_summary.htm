@@ -1,0 +1,64 @@
+﻿<table cellpadding="0" cellspacing="0" width="100%" style=" text-align:center;border:1px solid #f2f2f2;">
+    <thead>
+        <tr class="tr_laborder_title  tr_odd">
+            <th style="width:70%;">检查项目</th>
+            <th style="width:30%;">检查时间</th>
+        </tr>
+    </thead>
+    <tbody id="tbody_laborder_summary_wrapper">            
+        <tr>
+            <td colspan="2">
+                <div  style="text-align:center;">
+                    <img src="../Images/loading.gif" title="正在加载" alt="正在加载" />正在加载，请稍候...
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<script id="list_laborder_summary_template" type="text/x-template">
+<tr class="trbase tr_laborder_title" data-index="${index}">
+    <td>${examname}</td>
+    <td>${examtime}</td>
+</tr> 
+<tr class="hidden">
+    <td colspan="5" class="td_laborder_detail"  data-index="${index}" style="border:1px solid #ededed; ">
+        <div style="width:100%;padding-top:10px;padding-bottom:10px;" class="clearfix border_class_deep_top border_class_deep_bottom">
+            
+            <div class="clearfix"  class="tr_laborder_nestgrid">
+                <div style="width:100%;text-align:center;">
+                    <table cellspacing="0" cellpadding="0" width="100%">
+                        <thead style="border-top:1px solid black;border-bottom:1px solid black;">
+                            <tr>
+                                <th style="width:40%;">项目</th>
+                                <th style="width:20%;">结果</th>
+                                <th style="width:20%;">参考值</th>
+                                <th style="width:20%;">单位</th>
+                            </tr>
+                        </thead>
+                        <tbody class="sub_tbody_laborder_wrapper">
+                        </tbody>
+                    </table>
+                </div>
+               
+            </div>
+            
+        </div>
+    </td>
+</tr>
+</script>
+
+<script id="one_labresult_template" type="text/x-template">
+<tr>
+    <td>${itemname}</td>
+    <td>${value}<span class="must">${resultanalysis}</span></td>
+    <td>${reference}</td>
+    <td>${unit}</td>
+</tr>
+</script>
+
+<script type="text/javascript"  language="javascript">
+    require(["laborder_sumamry"], function (a) { a.show(); }); 
+</script>
+<style type="text/css">
+.tr_laborder_title{height:25px;border:1px solid #ededed;  cursor:pointer;}
+</style>

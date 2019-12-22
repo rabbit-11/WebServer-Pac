@@ -1,0 +1,282 @@
+﻿<div style="position: relative;" class="emerprediagnosis_wrapper">
+    <div id="emer_baseinfo_wrapper"></div>
+    <div id="emer_input_wrapper"></div>
+   
+    <div style="margin-top:30px;text-align:center;width:100%;">
+        <a class="easyui-linkbutton l-btn l-btn-small" id="emer_btn_prediagnosis_save">
+            <span class="l-btn-left">
+                <span class="l-btn-text">保存</span>
+            </span>
+        </a>
+        <a class="easyui-linkbutton l-btn l-btn-small" id="emer_btn_print" target="_blank">
+            <span class="l-btn-left">
+                <span class="l-btn-text">打印</span>
+            </span>
+        </a>
+        <a class="easyui-linkbutton l-btn l-btn-small" id="emer_link_detailinfo" target="_blank">
+            <span class="l-btn-left">
+                <span class="l-btn-text">查看详情</span>
+            </span>
+        </a>
+    </div>
+</div>
+<script id="emer_baseinfo_template" type="text/x-template">
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td style="width:8%"><b>姓名：</b></td>
+        <td style="width:12%"><div>${xingming}</div></td>
+        <td style="width:8%"><b>健康号：</b></td>
+        <td style="width:12%"><div>${bingrenid}</div></td>
+        <td style="width:8%"><b>五色高危：</b></td>
+        <td style="width:12%">
+            <div><span class="highriskcolor_wrapper"></span></div>
+        </td>
+        <td style="width:8%"><b>年龄：</b></td>
+        <td style="width:12%"><div>${age}</div></td>
+        <td style="width:8%"><b>现病史：</b></td>
+        <td style="width:12%"><div>${presenthistory}</div></td>
+    </tr>
+    <tr>
+        <td><b>科室：</b></td>
+        <td><div>${keshimc}</div></td>
+        <td><b>就诊卡号：</b></td>
+        <td><div>${jiuzhenkh}</div></td>
+        <td><b>挂号时间：</b></td>
+        <td><div>${xitongsj}</div></td>
+        <td><b>地址：</b></td>
+        <td colspan="3"><div>${jiatingzz}</div></td>
+    </tr>
+</table>
+</script>
+<script  id="emer_input_template" type="text/x-template">
+<table cellpadding="0" cellspacing="0" class="customtable">
+    <tr>
+        <td class="form_td form_td_title form_td_widthflag"><span class="form_td_span_title" style="display:inline-block;width:100px;"></span></td>
+        <td class="form_td form_td_ctrl"  colspan="7"></td>
+    </tr> 
+    <tr>
+        <td colspan="8">
+           <fieldset><legend>入院情况</legend></fieldset>
+        </td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">主诉</span></td>
+        <td class="form_td form_td_ctrl td_textbox " data-id="tmpl_chiefcomplaint" colspan="7" data-value="${chiefcomplaint}" ></td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title"></span></td>
+        <td id="form_td_emer_chiefcomplaint_wrapper" style="width:550px; word-break:normal;" colspan="7" data-type="4" data-stage="1"></td>
+    </tr> 
+    <tr>    
+        <td class="form_td form_td_title"><span class="form_td_span_title">入院方式</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_admissionmethod" data-value="${admissionmethod}"  data-url="../Services/ConfigService.asmx/Select?q=admissionmethod"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">意识昏迷</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_coma" data-value="${coma}"  data-url="../Services/ConfigService.asmx/Select?q=coma"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">GCS</span></td>
+        <td class="form_td form_td_ctrl td_dropdowntree" data-id="tmpl_gcs" data-value="${gcs}"   data-multiple="true" data-cascadeCheck="false"  data-fullpathdelimiter=":" data-entriesdelimiter=" "  data-url="../Services/ConfigService.asmx/DropDownTree?q=gcs" colspan="3"></td>
+    </tr>
+    <tr>
+        <td colspan="8">
+           <fieldset><legend>生命体征</legend></fieldset>
+        </td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">体温(℃)</span></td>
+        <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_temperature"  data-value="${temperature}" data-min="0" data-max="50"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">脉搏(cpm)</span></td>
+        <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_pulse" data-value="${pulse}" data-min="0" data-max="500"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">呼吸(次/分)</span></td>
+        <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_breathing"  data-value="${breathing}" data-min="0" data-max="500" ></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">血压(mmHg)</span></td>
+        <td><span class="form_td form_td_ctrl td_numberbox selfwidth" data-id="tmpl_sbp"  style="width:41%;display:inline-block;" data-value="${sbp}" data-min="0" data-max="200"></span><span style="display:inline-block;width:15%; text-align:center;">/</span><span class="form_td form_td_ctrl td_numberbox selfwidth" data-id="tmpl_dbp"  style="width:41%;display:inline-block;" data-value="${dbp}" data-min="0" data-max="200"></span></td>
+    </tr>
+    <tr>
+    <td class="form_td form_td_title"><span class="form_td_span_title">血氧饱和度(%)</span></td>
+        <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_bloodoxygen"  data-value="${bloodoxygen}" data-min="0" data-max="100"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">身高(cm)</span></td>
+        <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_height" data-value="${height}" data-min="0" data-max="300"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">体重(kg)</span></td>
+        <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_weight"  data-value="${weight}"  data-min="0" data-max="200"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">测量状态</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_emermeasure" data-value="${emermeasure}"  data-url="../Services/ConfigService.asmx/Select?q=emermeasure"></td>    
+    </tr>
+    <tr>
+        <td colspan="8">
+           <fieldset><legend>专科体征</legend></fieldset>
+        </td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">宫缩</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_uterine" data-value="${uterine}"  data-url="../Services/ConfigService.asmx/Select?q=uterine"></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">阴道流血</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_vaginalbleeding" data-value="${vaginalbleeding}"  data-url="../Services/ConfigService.asmx/Select?q=vaginalbleeding"></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">阴道流液</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_vaginalfluid" data-value="${vaginalfluid}"  data-url="../Services/ConfigService.asmx/Select?q=vaginalfluid"></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">用腹压</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_abdominalpress" data-value="${abdominalpress}"  data-url="../Services/ConfigService.asmx/Select?q=abdominalpress"></td>    
+    </tr>
+    <tr id="form_tr_wrapper_emer_multifetal"></tr>
+    <tr>
+        <td colspan="8">
+           <fieldset><legend>分级分区</legend></fieldset>
+        </td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">分区</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_partition" data-value="${partition}"  data-url="../Services/ConfigService.asmx/Select?q=partition"></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">分级</span></td>
+        <td class="form_td form_td_ctrl td_combogrid" data-id="tmpl_emergrade" data-value="${emergrade}" data-options="
+            panelWidth:650,
+            panelHeight:350,
+            value:'${emergrade}',
+            idField:'value',
+            textField:'text',
+            method: 'get',
+            nowrap:false,
+            url:'../Services/ConfigService.asmx/Select?q=emergrade',
+            columns:[[
+                {field:'text',title:'类别',width:'10%'},
+                {field:'info',title:'定义',width:'60%'},
+                {field:'req',title:'分诊要求',width:'30%'}
+            ]]
+        " ></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">分诊科室</span></td>
+        <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_triagedepartname" data-value="${triagedepartname}"></td>
+    </tr>
+    <tr>
+        <td colspan="8">
+           <fieldset><legend>联系方式</legend></fieldset>
+        </td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">联系人</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_contact" data-value="${contact}"  data-url="../Services/ConfigService.asmx/Select?q=contact"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">联系电话</span></td>
+        <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_contactnumber" data-value="${contactnumber}"></td>
+    </tr>
+    <tr>
+        <td colspan="8">
+           <fieldset><legend>病史</legend></fieldset>
+        </td>
+    </tr>
+    <tr>    
+        <td class="form_td form_td_title"><span class="form_td_span_title">过敏史</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_allergyhistory" data-multiple="true" data-allowtext="true"   data-value="${allergyhistory}"  data-url="../Services/ConfigService.asmx/Select?q=allergyhistory"></td>  
+            
+        <td class="form_td form_td_title"><span class="form_td_span_title">流行病</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_epidemic" data-multiple="true" data-allowtext="true"   data-value="${epidemic}"  data-url="../Services/ConfigService.asmx/Select?q=epidemic"></td>  
+    </tr>
+    <tr>
+        <td colspan="8">
+           <fieldset><legend>评估</legend></fieldset>
+        </td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">疼痛评估</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_paineva" data-value="${paineva}"  data-url="../Services/ConfigService.asmx/Select?q=paineva"></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">跌倒评估</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_falleva" data-value="${falleva}"  data-url="../Services/ConfigService.asmx/Select?q=falleva"></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">心理评估</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_psyeva" data-value="${psyeva}"  data-url="../Services/ConfigService.asmx/Select?q=psyeva"></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">沟通能力</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_comunicationeva" data-value="${comunicationeva}"  data-url="../Services/ConfigService.asmx/Select?q=comunicationeva"></td>    
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">营养评估</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_nutritioneva" data-value="${nutritioneva}"  data-url="../Services/ConfigService.asmx/Select?q=nutritioneva"></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">受虐</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_battered" data-value="${battered}"  data-url="../Services/ConfigService.asmx/Select?q=battered"></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">康复需求</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_recovereva" data-value="${recovereva}"  data-url="../Services/ConfigService.asmx/Select?q=recovereva"></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">社会经济评估(家庭支持)</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_economicevafamily" data-value="${economicevafamily}"  data-url="../Services/ConfigService.asmx/Select?q=economicevafamily"></td>    
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">社会经济评估(支付能力)</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_economicevapay" data-value="${economicevapay}"  data-url="../Services/ConfigService.asmx/Select?q=economicevapay"></td>    
+        <td class="form_td form_td_title"><span class="form_td_span_title">特殊人群评估</span></td>
+        <td class="form_td form_td_ctrl td_textbox selfwidth" data-id="tmpl_specialeva" data-allowtext="false" data-url="" data-width="96%" style="position:relative;" data-multiple="true" data-panelWidth="300" data-panelHeight="200" data-value="${specialeva}" colspan="5">
+            <span style="position:absolute;right:2px;top:8px;">
+                <a class="magnifier btnlink btn_specialeva" id=""></a>
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="8">
+           <fieldset><legend>其他</legend></fieldset>
+        </td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">转运规范</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_transrule" data-value="${transrule}"  data-url="../Services/ConfigService.asmx/Select?q=transrule"></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">去向</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_fate" data-value="${fate}"  data-url="../Services/ConfigService.asmx/Select?q=fate"></td>  
+        <td class="form_td form_td_title"><span class="form_td_span_title">转院医院</span></td>
+        <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_fatehosname"  data-value="${fatehosname}"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">绿色通道</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_greenchanel" data-value="${greenchanel}"  data-url="../Services/ConfigService.asmx/Select?q=greenchanel"></td>    
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">评估人</span></td>
+        <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_evaname"  data-value="${evaname}"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">评估时间</span></td>
+        <td class="form_td form_td_ctrl td_datetimebox" data-id="tmpl_evatime" data-value="${evatime}"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">接诊医生</span></td>
+        <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_treatdoctorname"  data-value="${treatdoctorname}"></td>
+        <td class="form_td form_td_title"><span class="form_td_span_title">医生接诊时间</span></td>
+        <td class="form_td form_td_ctrl td_datetimebox" data-id="tmpl_doctortreattime" data-value="${doctortreattime}"></td>
+    </tr>
+    <tr>
+        <td class="form_td form_td_title"><span class="form_td_span_title">转归</span></td>
+        <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_outcome" data-value="${outcome}"  data-url="../Services/ConfigService.asmx/Select?q=outcome"  event-onchanged="outcome_changed"></td>    
+        <td class="form_td form_td_title"><span class="form_td_span_title">转归时间</span></td>
+        <td class="form_td form_td_ctrl td_datetimebox" data-id="tmpl_outcometime" data-value="${outcometime}"></td>
+  
+        <td class="form_td form_td_title"><span class="form_td_span_title">预诊说明</span></td>
+        <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_remark"  data-value="${remark}" colspan="3"></td>
+    </tr>
+    
+    <tr id="form_tr_wrapper_multifetal"></tr>
+
+</table>
+<div class="hidden">
+    <input type="text" class="form_td_ctrl td_hidden" value="${id}" data-id="tmpl_id" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${idcard}" data-id="tmpl_idcard" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${patientid}" data-id="tmpl_patientid" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${evacode}" data-id="tmpl_evacode" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${treatdoctorcode}" data-id="tmpl_treatdoctorcode" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${jiuzhenid}" data-id="tmpl_jiuzhenid" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${triagedepartcode}" data-id="tmpl_triagedepartcode" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${specialevaid}" data-id="tmpl_specialevaid" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${jigoudm}" data-id="tmpl_jigoudm" />
+</div>
+</script>
+
+<script id="emer_color_template" type="text/x-template">
+<span class="shapebase ${color}">${color_text}</span>
+</script>
+
+<script type="text/javascript" language="javascript">
+    function outcome_changed(args) {
+        if (args == null || args == undefined)
+            return;
+        var sender = args.sender;
+        require(["page_emerprediagnosis"], function (emr) {
+            emr.GetOutComeTime(sender);
+        });
+    }
+</script>
+
+
+<script type="text/javascript" language="javascript">
+    function callback_specialeva() {
+        require(["page_emerprediagnosis", "base_usercontrol", "jextend"], function (pe, base) {
+            var data_back = base.getattr("#win_specialeva", "data-back");
+            if (data_back != null && data_back != undefined && data_back != "") {
+                var data = JSON.parse(data_back);
+                pe.setSpecialEva(data,base);
+                //list_visitrecord.setHighRisk(data);
+            }
+        });
+    } 
+</script>

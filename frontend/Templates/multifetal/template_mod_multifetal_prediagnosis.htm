@@ -1,0 +1,17 @@
+﻿<tr  data-index="${index}" class="tr_multifetal">
+    <td class="form_td form_td_title"><span class="form_td_span_title">胎心</span></td>
+    <td class="form_td form_td_ctrl td_numberbox" data-id="tmpl_heartrate" data-index="${index}" data-group="${group}" data-value="${heartrate}" data-min="0" data-max="200"></td>
+    
+    <td class="form_td form_td_title"><span class="form_td_span_title">胎位</span></td>
+    <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_position" data-index="${index}" data-group="${group}" data-value="${position}" data-url="../Services/ConfigService.asmx/Select?q=position" data-panelHeight="200"  event-onchanged="position_changed"></td>
+    
+    <td class="form_td form_td_title"><span class="form_td_span_title">先露</span></td>
+    <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_presentposition"  data-value="${presentposition}" data-index="${index}" data-group="${group}"data-url="../Services/ConfigService.asmx/Select?q=presentposition"></td>
+    
+    <td class="form_td form_td_title"><span class="form_td_span_title">胎动</span></td>
+    <td class="form_td form_td_ctrl td_combobox selfwidth" data-id="tmpl_fetalmove"  data-group="${group}" data-index="${index}" data-value="${fetalmove}" data-width="70%" style="position:relative;" data-url="../Services/ConfigService.asmx/Select?q=fetalmove">
+        <div style="position:absolute;right:6px;top:6px;width:25.5%;">
+            <a class="plus btnlink" title="增加胎次" ></a><a class="minus btnlink" title="删除胎次"></a>
+        </div>
+    </td> 
+</tr>

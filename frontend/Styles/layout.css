@@ -1,0 +1,36 @@
+﻿/*Layout
+---------------------------------------------------------------------------*/
+form{overflow:hidden;}
+#setting{height: 40px;line-height: 40px;color: White;font-size: 14px;}
+#masterisktip{margin-top:4px;}
+#mainContent{margin-top:4px;}
+#container {margin:0px auto;}
+#mainblock { overflow:hidden;}
+#bottom { height:40px; text-align:center;height:40px;border-top:2px solid #F1F1F1;margin-top:20px;width:100%}
+#content{min-height:600px;}
+.wrapper{margin-left:10px;margin-right:10px;}
+#page_wrapper,.page_wrapper{width:960px;margin:10px auto;}
+
+.visitrecord_left_max{width:216px;float:left;}
+.visitrecord_right_max{ margin-left:222px;overflow:hidden;}
+
+.visitrecord_left_min{width:54px;float:left;}
+.visitrecord_right_min{ margin-left:60px;overflow:hidden;}
+
+#postnatalvisitrecord_titlespan{width:88px;}
+.recordlist>th{
+    background-color: #3ec882;
+    color: white;
+    font-size: 13px;
+    height: 30px;
+}
+.recordlist>td{
+    text-align: center;
+    height: 30px;
+}
+.recordlist>td:hover{
+    cursor:pointer;
+}
+.recordlist:hover{
+    background-color: rgba(85, 206, 146, 0.363);
+}

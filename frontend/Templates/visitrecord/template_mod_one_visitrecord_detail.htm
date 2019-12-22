@@ -1,0 +1,288 @@
+﻿<div class="border_class_deep_top border_class_deep_bottom div_form_wrapper" style="border-left:0px solid black;border-right:0px solid black;">
+    <div id="form_wrapper" style="width:96%;margin:6px auto 6px auto;">
+        <table width="100%" cellpadding="0" cellspacing="0" class="customtable">
+            <tr>
+                <td class="form_td form_td_title form_td_widthflag"><span style="display:inline-block;width:78px;"></span></td>
+                <td class="form_td" colspan="7"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>主诉/诊断</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">主诉</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_chiefcomplaint" colspan="7" data-value="${chiefcomplaint}"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title"></span></td>
+                <td id="form_td_chiefcomplaint_wrapper" style="width:550px; word-break:normal;" colspan="7" data-type="4" data-stage="1"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">现病史</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_presenthistory" colspan="7" data-value="${presenthistory}"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title"></span></td>
+                <td id="form_td_presenthistory_wrapper" style="width:550px; word-break:normal;" colspan="7" data-type="6" data-stage="1"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">主诊断</span></td>
+                <td class="form_td form_td_ctrl td_combobox selfwidth" data-id="tmpl_maindiagnosis" data-url="" data-width="78%" data-readonly="false" style="position:relative;" data-value="${maindiagnosis}"  data-panelWidth="300" data-panelHeight="200" data-recordtext="true">
+                    <span style="position:absolute;right:2px;top:8px;">
+                        <a class="magnifier btnlink btn_diagnosis_detail" id=""></a>
+                    </span>
+                </td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">主诊断说明</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_diagnosisinfo" data-value="${diagnosisinfo}"  colspan="3"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">次诊断</span></td>
+                <td class="form_td form_td_ctrl td_combobox selfwidth" data-id="tmpl_secondarydiagnosis" data-allowtext="false" data-url="" data-width="78%" data-readonly="false" style="position:relative;" data-multiple="true" data-panelWidth="300" data-panelHeight="200" data-value="${secondarydiagnosis}">
+                    <span style="position:absolute;right:2px;top:8px;">
+                        <a class="magnifier btnlink btn_diagnosis_detail" id=""></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">既往用药史</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_medicationlog" colspan="7" data-value="${medicationlog}"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">中医证型</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_tcmsyndrome" colspan="7" data-value="${tcmsyndrome}"></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>专科体格检查</legend></fieldset>
+                </td>
+            </tr>
+            <tr>
+                
+                <td class="form_td form_td_title"><span class="form_td_span_title">宫缩</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_uterinecontraction" data-value="${uterinecontraction}" data-url="../Services/ConfigService.asmx/Select?q=uterinecontraction" ></td>
+                
+                <td class="form_td form_td_title"><span class="form_td_span_title">破水</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_brokenwater" data-value="${brokenwater}" data-url="../Services/ConfigService.asmx/Select?q=brokenwater" ></td>
+                
+                <td class="form_td form_td_title"><span class="form_td_span_title">羊水性状</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_amnioticfluidcharacter" data-value="${amnioticfluidcharacter}" data-url="../Services/ConfigService.asmx/Select?q=amnioticfluidcharacter" ></td>
+                
+                <td class="form_td form_td_title"><span class="form_td_span_title">阴道流血</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_vaginalbleeding" data-value="${vaginalbleeding}" data-url="../Services/ConfigService.asmx/Select?q=vaginalbleeding" ></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">宫口</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_palacemouth" data-value="${palacemouth}" data-url="../Services/ConfigService.asmx/Select?q=palacemouth" ></td>
+            </tr>
+            <!--<tr>-->
+                <!--<td class="form_td form_td_title">体重(kg)</td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_weight"></td>
+                <td class="form_td form_td_title">收缩压(mmHg)</td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_sbp"></td>
+                <td class="form_td form_td_title">舒张压(mmHg)</td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_dbp"></td>-->
+                <!--<td class="form_td form_td_title"><span class="form_td_span_title">脉搏(cpm)</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_heartrate" data-value="${heartrate}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">浮肿</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_edemastatus" data-value="${edemastatus}" data-url="../Services/ConfigService.asmx/Select?q=edemastatus"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">衔接</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_xianjie" data-value="${xianjie}" data-url="../Services/ConfigService.asmx/Select?q=xianjie"></td>
+                
+                <td class="form_td form_td_title"><span class="form_td_span_title">肝功能</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_liverfunction" data-value="${liverfunction}" ></td>-->
+           <!-- </tr>
+            <tr>-->
+                <!-- <td class="form_td form_td_title">宫高(cm)</td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_heightfundusuterus"></td>
+                <td class="form_td form_td_title">腹围(cm)</td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_abdomencircumference"></td>-->
+                        
+            <!--</tr>-->
+            <!--<tr id="tr_multifetal_wrapper"></tr>-->
+            <!-- <tr>
+                <td class="form_td form_td_title">胎心率(次/分)</td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_fetalheartrate"></td>
+                <td class="form_td form_td_title">胎方位</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_fetalposition" data-url="../Services/ConfigService.asmx/Select?q=position"></td>
+                <td class="form_td form_td_title">胎动</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_fetalmove"></td>
+                <td class="form_td form_td_title">先露</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_fetalpresentposition" data-url="../Services/ConfigService.asmx/Select?q=presentposition"></td>
+            </tr>-->
+            <!--<tr>
+                <td class="form_td form_td_title">胎心监护</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_fetalmonitor"></td>
+            </tr>-->
+            
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>辅助检查</legend></fieldset>
+                </td>
+            </tr>
+           <!-- <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">脉搏(cpm)</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_heartrate" data-value="${heartrate}"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">浮肿</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_edemastatus" data-value="${edemastatus}" data-url="../Services/ConfigService.asmx/Select?q=edemastatus"></td>
+                <td class="form_td form_td_title"><span class="form_td_span_title">衔接</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_xianjie" data-value="${xianjie}" data-url="../Services/ConfigService.asmx/Select?q=xianjie"></td>
+            </tr>-->
+            <tr>
+                <!--<td class="form_td form_td_title">Hb(g/L)</td>
+                <td class="form_td form_td_ctrl td_textbox" id="Td9"></td>
+                <td class="form_td form_td_title">尿蛋白(g/L)</td>
+                <td class="form_td form_td_ctrl td_textbox" id="Td10"></td>
+                <td class="form_td form_td_title">血糖(mmol/L)</td>
+                <td class="form_td form_td_ctrl td_textbox" id="Td11"></td>-->
+                 <td class="form_td form_td_title"><span class="form_td_span_title">血红蛋白</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_haemoglobin" data-value="${haemoglobin}"></td>
+                 <td class="form_td form_td_title"><span class="form_td_span_title">尿蛋白</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_albuminuria" data-value="${albuminuria}"></td>
+                 <td class="form_td form_td_title"><span class="form_td_span_title">肝功能</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_liverfunction" data-value="${liverfunction}" data-url="../Services/ConfigService.asmx/Select?q=liverfunction" ></td>
+
+                 <td class="form_td form_td_title"><span class="form_td_span_title">胎心监护</span></td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_monitor" data-value="${monitor}" data-url="../Services/ConfigService.asmx/Select?q=monitor" ></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">B超</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_bultrasonicdiagnosis" colspan="7" data-value="${bultrasonicdiagnosis}"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">其他检验检查</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_othercommonexam" colspan="7" data-rows="3" data-height="80" data-value="${othercommonexam}"></td>
+            </tr>
+            
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title"></span></td>
+                <td id="form_td_othercommonexam_wrapper" style="width:550px; word-break:normal;" colspan="5" data-type="5" data-stage="1"></td>
+                <td colspan="2" style=" text-align:right;">
+                    <a href="#"  class="modellink btn_laborder_import" >导入检验</a>
+                    <a href="#"  class="modellink btn_examorder_import" >导入检查</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>随访评估</legend></fieldset>
+                </td>
+            </tr>
+            <!--<tr>
+                <td class="form_td form_td_title must">心理评估</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_psyeva"></td>
+                <td class="form_td form_td_title must">疼痛评估</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_paineva"></td>
+                <td class="form_td form_td_title must">康复需求</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_recovereva"></td>
+                <td class="form_td form_td_title must">营养评估</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_nutritioneva"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title must">跌倒评估</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_falleva"></td>
+                <td class="form_td form_td_title must">社会经济评估(社会支持)</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_socialeva"></td>
+                <td class="form_td form_td_title must">社会经济评估(经济状况)</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_economiceva"></td>
+                <td class="form_td form_td_title must">沟通能力筛选</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_comunicationeva"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title">学习意愿评估</td>
+                <td class="form_td form_td_ctrl td_combobox" data-id="tmpl_learningeva"></td>
+                <td class="form_td form_td_title">特殊人群评估</td>
+                <td class="form_td form_td_ctrl td_textbox" colspan="5"></td>
+            </tr>-->
+            <tr>
+                <td class="form_td form_td_title must"><span class="form_td_span_title">高危等级</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_highrisklevel_text" data-readonly="true" data-value="${highrisklevel_text}"></td>
+                
+                <td class="form_td form_td_title must"><span class="form_td_span_title">高危因素</span></td>
+                <td class="form_td form_td_ctrl td_textbox selfwidth" data-id="tmpl_highriskreason" colspan="5" data-value="${highriskreason}" data-readonly="true" data-width="96%" style="position:relative;">
+                    <span style="position:absolute;right:0px;top:8px;">
+                        <a class="magnifier btnlink btn_highrisk_detail"></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>                            
+                <td class="form_td form_td_title"><span class="form_td_span_title">其他评估</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_generalcomment" data-value="${generalcomment}" colspan="5" ></td>
+                
+                <td class="form_td form_td_title"><span class="form_td_span_title">下次随访</span></td>
+                <td class="form_td form_td_ctrl td_datepicker" data-id="tmpl_followupappointment" data-value="${followupappointment}"  event-onselected="followupappointment_selected" ></td>
+            </tr>
+            <tr>
+                <td colspan="8">
+                    <fieldset class="allborder"><legend>处理宣教</legend></fieldset>
+                </td>
+            </tr>
+            
+            <tr>                            
+                <td class="form_td form_td_title"><span class="form_td_span_title">处理建议</span></td>
+                <td class="form_td form_td_ctrl td_textbox" data-id="tmpl_suggestion" colspan="7" data-rows="3" data-height="80" data-value="${suggestion}"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title"></span></td>
+                <td id="form_td_suggestion_wrapper" style="width:550px; word-break:normal;" colspan="6" data-type="3" data-stage="1">
+                   
+                </td>
+                 <td id="form_td_suggestion_import_wrapper" style="word-break:normal; text-align:right" colspan="1" >
+                   <a href="#"  class="modellink btn_today_req_import" >导入今日开单</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title">健康宣教</span></td>
+                <td class="form_td form_td_ctrl td_textbox noblur" data-id="tmpl_guide" colspan="7" data-rows="3" data-height="80" data-value="${guide}"></td>
+            </tr>
+            <tr>
+                <td class="form_td form_td_title"><span class="form_td_span_title"></span></td>
+                <td id="form_td_guide_wrapper" style="width:550px; word-break:normal;" colspan="7" data-type="2" data-stage="1"></td>
+            </tr>
+            <tr>
+                <td  colspan="6" style="vertical-align:middle;  text-align:right;">检查医生：</td>
+                <td class="form_td form_td_ctrl td_label" data-id="tmpl_lb_doctorname" data-value="${doctorname}" style=" vertical-align: middle;text-align:left;"></td>
+                <td class="form_td" style="vertical-align:middle;  text-align:right;">
+                    <a class="btn btn_detail_save"   style="padding-left:14px;padding-right:14px; padding-top:3px;padding-bottom:3px; font-size:14px;">保存</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>   
+    
+<div class="hidden">
+    <input type="text" class="form_td_ctrl td_hidden" value="${diagnosisdic}" data-id="tmpl_diagnosisdic" data-value="${diagnosisdic}"  />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${id}" data-id="tmpl_id" data-value="${id}" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${checkweek}" data-id="tmpl_checkweek" data-value="${checkweek}"  />    
+    <input type="text" class="form_td_ctrl td_hidden" value="${checkday}" data-id="tmpl_checkday" data-value="${checkday}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${idcard}" data-id="tmpl_idcard" data-value="${idcard}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${doctorid}" data-id="tmpl_doctorid" data-value="${doctorid}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${doctorname}" data-id="tmpl_doctorname" data-value="${doctorname}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${jiuzhenid}" data-id="tmpl_jiuzhenid" data-value="${jiuzhenid}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${multifetal}" data-id="tmpl_multifetal" data-value="${multifetal}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${hospitalcode}" data-id="tmpl_hospitalcode" data-value="${hospitalcode}"  /> 
+    <input type="text" class="form_td_ctrl td_hidden" value="${visitid}" data-id="tmpl_visitid" data-value="${visitid}" />    
+    <input type="text" class="form_td_ctrl td_hidden" value="${highriskdic}" data-id="tmpl_highriskdic" data-value="${highriskdic}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${bultrasonicdate}" data-id="tmpl_bultrasonicdate" data-value="${bultrasonicdate}" />    
+    <input type="text" class="form_td_ctrl td_hidden" value="${bultrasonicid}" data-id="tmpl_bultrasonicid" data-value="${bultrasonicid}" />    
+    <input type="text" class="form_td_ctrl td_hidden" value="${heartbultrasonicdiagnosis}" data-id="tmpl_heartbultrasonicdiagnosis" data-value="${heartbultrasonicdiagnosis}" />    
+    <input type="text" class="form_td_ctrl td_hidden" value="${heartbultrasonicdate}" data-id="tmpl_heartbultrasonicdate" data-value="${heartbultrasonicdate}" />    
+    <input type="text" class="form_td_ctrl td_hidden" value="${heartbultrasonicid}" data-id="tmpl_heartbultrasonicid" data-value="${heartbultrasonicid}" /> 
+    <input type="text" class="form_td_ctrl td_hidden" value="${bbheartbultrasonicdiagnosis}" data-id="tmpl_bbheartbultrasonicdiagnosis" data-value="${bbheartbultrasonicdiagnosis}" />    
+    <input type="text" class="form_td_ctrl td_hidden" value="${bbheartbultrasonicdate}" data-id="tmpl_bbheartbultrasonicdate" data-value="${bbheartbultrasonicdate}" />
+    <input type="text" class="form_td_ctrl td_hidden" value="${bbheartbultrasonicid}" data-id="tmpl_bbheartbultrasonicid" data-value="${bbheartbultrasonicid}" />    
+    <input type="text" class="form_td_ctrl td_hidden" value="${haemoglobincheckdate}" data-id="tmpl_haemoglobincheckdate" data-value="${haemoglobincheckdate}" />    
+    <input type="text" class="form_td_ctrl td_hidden" value="${albuminuriacheckdate}" data-id="tmpl_albuminuriacheckdate" data-value="${albuminuriacheckdate}" />    
+    <input type="text" class="form_td_ctrl td_hidden" value="${bloodsugarcheckdate}" data-id="tmpl_bloodsugarcheckdate" data-value="${bloodsugarcheckdate}" />    
+    <input type="text" class="form_td_ctrl td_hidden" value="${bloodsugar}" data-id="tmpl_bloodsugar" data-value="${bloodsugar}" />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${pregnantinfoid}" data-id="tmpl_pregnantinfoid" data-value="${pregnantinfoid}"  />
+    <input type="text" class="form_td_ctrl td_hidden" value="${pregnantid}" data-id="tmpl_pregnantid" data-value="${pregnantid}" />      
+    <input type="text" class="form_td_ctrl td_hidden" value="${departmentname}" data-id="tmpl_departmentname" data-value="${departmentname}" />  
+    <input type="text" class="form_td_ctrl td_hidden" value="${highrisklevel}" data-id="tmpl_highrisklevel" data-value="${highrisklevel}" /> 
+    <input type="text" class="form_td_ctrl td_hidden" value="${mechanism}" data-id="tmpl_mechanism" data-value="${mechanism}" /> 
+</div>
+
+<script  type="text/javascript" language="javascript">
+    function followupappointment_selected(date) {
+        require(["mod_onevisitrecord_detail"], function (a) {
+            a.followupappointment_selected(date);
+        });
+    }
+</script>
