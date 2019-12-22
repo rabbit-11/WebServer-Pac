@@ -1,0 +1,8 @@
+﻿[
+	{ "href": "Page_PersonalModel.aspx?jobnumber='#dataitems.jobnumber#'&doctorname='#dataitems.doctorname#'&jigoudm='#dataitems.jigoudm#'", "visible": "inline-block", "text": "模板","type":1,"id":1,"win":false },
+	{ "href": "Page_ChangYongZD.aspx?jobnumber='#dataitems.jobnumber#'&jigoudm='#dataitems.jigoudm#'", "visible": "inline-block", "text": "诊断","type":1,"id":2,"win":false },
+	{ "href": "Page_MostRisk.aspx?jobnumber='#dataitems.jobnumber#'&jigoudm='#dataitems.jigoudm#'", "visible": "inline-block", "text": "极危","type":1,"id":3,"win":false },
+	{ "href": "Page_PregnantList.aspx?visittype='more'&jigoudm='#dataitems.jigoudm#'", "visible": "inline-block", "text": "查询","type":1,"id":4,"win":false },
+	{ "href": "Page_PregnantList.aspx?visittype='one'&shenfenzh='#dataitems.shenfenzh#'&bingrenid='#dataitems.bingrenid#'&jigoudm='#dataitems.jigoudm#'", "visible": "inline-block", "text": "历史","type":1,"id":5,"win":false },
+	{ "href": "http://222.161.199.149:8091/HIS-MZYSZ/page/DoctorWorkstation/doctor.html?deptname='#dataitems.departmentname#'&deptcode='#dataitems.departmentcode#'&userName='#dataitems.doctorname#'&userCode='#dataitems.jobnumber#'&outpNo='#dataitems.jiuzhenid#'&patientId='#dataitems.bingrenid#'&ys='#dataitems.doctorname#'&ysCode='#dataitems.jobnumber#'&kzTime='#dataitems.timestamp#'", "visible": "none", "text": "医嘱","type":1,"id":101,"win":true }
+]
